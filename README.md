@@ -7,10 +7,8 @@ Web development for Ivec Law theme:
 
 <h3>Custom Post Types</h3>
 
-	<ol>
-		<li>Practice Areas</li>
-		<li>Testimonials</li>
-	</ol>
+	1. Practice Areas
+	2. Testimonials
 
 <h3>Templates</h3>
 
