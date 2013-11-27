@@ -6,7 +6,7 @@ Repo for Ivec Law Custom Theme
 Web development for Ivec Law theme:
 
 Custom Post Types
-	1. Practice Areas
+	1. Practice Areas <br/>
 	2. Testimonials
 
 Templates
