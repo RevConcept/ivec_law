@@ -8,12 +8,12 @@
 <?php get_header(); ?>
 
 			<div id="content">
-				<div id="two-lines"></div>
+				<div class="two-lines"></div>
 
 				<div id="inner-content" class="wrap clearfix">
 					<?php get_sidebar(); ?>
 
-					<div id="main" class="eightcol first clearfix" role="main">
+					<div id="main" class="eightcol last clearfix" role="main">
 						
 							<?php	if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -28,27 +28,29 @@
 
 										<section class="section entry-content" id="tsml-header">
 											<p>You can filter testimonials by type by clicking the options below.</p>
-											<div class="clearfix tsml-filter" id="btn-wrap">
+											<div class="tsml-filters" id="btn-wrap">
 												<a class="current btn" data-filter="*">All</a>
 												<a class="btn" data-filter=".client">Clients</a>
 												<a class="btn" data-filter=".attorney">Attorneys</a>
 											</div>
 										</section>
 
-										<section class="entry-content clearfix section tsml-container" itemprop="articleBody">
+										<section class="section entry-content clearfix" itemprop="articleBody">
+
 											
 											<?php $tsml_posts = get_posts( array(
 																			'post_type' => 'testimonials',
 																			'post_status' => 'publish',
 																			'numberposts' => -1
 																));
-												if( $tsml_posts ) :
-													foreach ($tsml_posts as $tsml_post) : ?>
+												if( $tsml_posts ) : ?>
+													<div class="tsml-container">
+												<?php foreach ($tsml_posts as $tsml_post) : ?>
 
 														<?php if( get_field('tsml_type', $tsml_post->ID) ) : 
 															$tsml_class = strtoLower( get_field('tsml_type', $tsml_post->ID ) );
 															?>
-															<div class="tsml <?php echo $tsml_class; ?>"><div class="q-left"></div><div class="q-right"></div>
+															<div class="tsml <?php echo $tsml_class; ?>">
 														<?php endif; ?>
 
 														<?php if( get_field('tsml_title', $tsml_post->ID) ) : ?>
@@ -56,7 +58,7 @@
 														<?php endif; ?>
 
 														<?php if( get_field('tsml_content', $tsml_post->ID) ) : ?>
-															<p><?php the_field('tsml_content', $tsml_post->ID); ?></p>
+															<p><span class="q-left"></span><span class="q-right"></span><?php the_field('tsml_content', $tsml_post->ID); ?></p>
 														<?php endif; ?>
 
 														<?php if( get_field('tsml_author', $tsml_post->ID) ) : ?>
@@ -68,6 +70,8 @@
 														<?php endif; ?>
 
 													<?php endforeach; ?>
+													
+													</div>
 
 											<?php else : ?>
 												<article id="post-not-found" class="hentry clearfix">

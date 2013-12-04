@@ -26,18 +26,25 @@ LAYOUT & GRID STYLES
 .wrap {
 	max-width: 1280px;
 }
-
+.two-lines {
+	&.mobile {
+		display: none;
+	}
+}
 #content {
-	margin-top: 5em;
+	position: relative;
+	margin-top: 70px;
+
+	.two-lines {
+		display: block;
+		top: 4px;
+		z-index: 100;
+	}
 }
-#top-lines {
-	margin-bottom: 0;
+#main.eightcol {
+	width: 73%;
 }
-#main {
-	margin-left:30%;
-	width: 72%;
-	margin-top: 2.2em;
-}
+
 
 /*********************
 HEADER STYLES
@@ -48,6 +55,14 @@ HEADER STYLES
 	top: 0;
 	width: 100%;
 	z-index: 800;
+	background: none;
+
+	#header-bg {
+		background: $blue;
+		height: 100px;
+		width: 100%;
+		position: absolute;
+	}
 
 	.nav {
 		background: none;
@@ -68,20 +83,58 @@ HEADER STYLES
 
 }
 
-	
+#mobile-menu {
+	display: none;
+}
+#logo-wrapper {
+	display: block;
+	text-align: center;
+	background: url(../images/sidebar-bg.jpg) repeat;
+	max-width: 258px;
+
+	.logo {
+		max-width: 258px;
+		width: 100%;
+		img {
+			width: 105%;
+			margin-left: -5px;
+		}
+	}
+}
+#phone {
+	text-align: center;
+	font-size: em(27);
+	line-height: em(27);
+	font-weight: bold;
+	margin: .5em auto;
+	background: $blue;
+	padding: .5em 0;
+	width: 90%;
+	@include x-text-shadow();
+	a {
+		text-decoration: none;
+		color: $phone-color;
+		text-align: center;
+		&:hover, &:focus {
+			color: $tan;
+		}
+	}
+	span {
+		display: block;
+		font-size: em(12);
+		line-height: em(12);
+		font-weight: normal;
+		color: $call-color;
+		@include text-shadow( .5px, 1px, 0, #ffffff );
+	}
+}
 
 
 
 /*********************
 NAVIGATION STYLES
 *********************/
-#mobile-menu {
-	display: none;
-}
-#nav-wrap {
-	width: 70.5%;
-	margin-left: 30.5%;
-}
+
 .nav {
 
 
@@ -177,13 +230,7 @@ NAVIGATION STYLES
 /*********************
 CONTENT AND PAGE STYLES
 *********************/
-#slider {
-	margin-top: 1em;
-}
 
-.entry-title, .single-title {
-	margin-top: 0;
-}
 .entry-content {
 	h2 {
 		margin-top: 0;
@@ -192,7 +239,9 @@ CONTENT AND PAGE STYLES
 }
 .testimonials-page {
 	.tsml {
-		width: 33%;
+		width: 27.5%;
+		padding: 2%;
+		margin: 1% 1% 1em;
 	}
 	.isotope-item {
 	    z-index: 2;
@@ -225,22 +274,35 @@ CONTENT AND PAGE STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-
-.sidebar {
+#sidebar-bg {
+	background: url(../images/sidebar-bg.jpg) repeat;
 	position: absolute;
+	max-width: 258px;
+	width: 22%;
 	top: 0;
-	z-index: 900;
-	max-width: 250px;
-	margin-top: 0;
-
-	#logo {
-		display: block;
-		img {
-			width: 105%;
-			margin-left: -5px;
-		}
-	}
+	bottom: 0;
+	z-index: 200;
 }
+#sidebar1 {
+	margin-top: -14px;
+	padding-top: 120px;
+	max-width: 258px;
+	z-index: 200;
+}
+.reg-position {
+	position: relative;
+	top: 0;
+}
+.fixed-at-bottom {
+	position: fixed;
+	width: 22.9282%;
+	max-width: 258px;
+	bottom: -40px;
+}
+.sticky-at-bottom {
+	position: absolute;
+}
+
 
 	.widgettitle {
 		border-bottom: 2px solid #444;
@@ -366,6 +428,10 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
+.footer {
+
+}
+
 .footer-links {
 	ul {
 		li {

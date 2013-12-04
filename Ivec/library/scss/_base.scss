@@ -159,9 +159,22 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
-
 .header {
-	background: $blue;
+	//background: $blue;
+
+	#header-bg {
+		background: $blue;
+		height: 150px;
+		width: 100%;
+		position: absolute;
+		z-index: -1;
+	}
+
+	.nav {
+		background: lighten($blue, 10%);
+		padding: 10px 0;
+		margin-top: 0;
+	}
 
 }
 
@@ -190,15 +203,16 @@ HEADER STYLES
 	}
 }
 
-	.logo {
+	.menu-logo {
 		display: block;
 		max-width: 258px;
 		img {
 			width: 100%;
 		}
 	}
-
-
+#logo-wrapper {
+	display: none;
+}
 
 /*********************
 SLIDER STYLES
@@ -206,7 +220,7 @@ SLIDER STYLES
 #slider {
 	width: 100%;
 	text-align: center;
-	margin-top: 2em;
+	margin-top: 3.5em;
 	img {
 		width: 100%;
 		max-width: 844px;
@@ -224,16 +238,6 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
-.header {
-
-	.nav {
-		background: lighten($blue, 10%);
-		padding: 10px 0;
-		margin-top: 0;
-
-	}
-
-}
 .nav {
 
 	li {
@@ -308,27 +312,33 @@ and more scalable.
 
 } /* end .nav */
 
-
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	
+	.two-lines {
+		display: none;
+	}
 }
-#two-lines {
+.two-lines {
 	background: url(../images/top-lines.png) repeat-x;
 	height: 10px;
 	width: 100%;
 	position: relative;
-	top: 4px;
 	
 	&.bottom {
 		margin-bottom: 6px;
+		margin-top: -16px;
+	}
+
+	&.mobile {
+		top: 154px;
+		z-index: -1;
 	}
 }
 #main {
-	margin-top: 0;
+	
 	h3 {
 		color: $red;
 	}
@@ -421,7 +431,7 @@ HOME STYLES
 			font-size: em(50);
 			@include text-shadow( 1px, 1px, 0, $white );
 			text-align: center;
-			margin-top: 0;
+			margin-top: 1em;
 		}
 
 		.single-title {}
@@ -432,7 +442,9 @@ HOME STYLES
 
 		/* want to style individual post classes? Booya! */
 		.post-id {}         /* post by id (i.e. post-3) */
-		.post {}            /* general post style */
+		.post {
+			margin-top: 2.2em;
+			}            /* general post style */
 		.page {}            /* general article on a page style */
 		.attachment {}      /* general style on an attatchment */
 		.sticky {}          /* sticky post style */
@@ -673,6 +685,16 @@ TESTIMONIALS STYLES
 		
 		p {
 			line-height: 1.5em;
+			position: relative;
+			.q-left, .q-right {
+				top: -.3em;
+			}
+			.q-left {
+				left: 0;
+			}
+			.q-right {
+				right: 0;
+			}
 		}
 
 		h3 {
@@ -688,6 +710,7 @@ TESTIMONIALS STYLES
 			font-size: 1.2em;
 			
 		}
+		
 	}
 	
 }
@@ -1037,35 +1060,7 @@ SIDEBARS & ASIDES
 		@include x-text-shadow();
 	}
 }
-	#logo {
-		display: none;
-	}
-	#phone {
-		text-align: center;
-		font-size: em(27);
-		line-height: em(27);
-		font-weight: bold;
-		margin: .5em auto;
-		width: 90%;
-		background: $blue;
-		padding: .6em 0;
-		@include x-text-shadow();
-		a {
-			text-decoration: none;
-			color: $phone-color;
-			&:hover, &:focus {
-				color: $tan;
-			}
-		}
-		span {
-			display: block;
-			font-size: em(12);
-			line-height: em(12);
-			font-weight: normal;
-			color: $call-color;
-			@include text-shadow( .5px, 1px, 0, #ffffff );
-		}
-	}
+	
 	#contact {
 		
 		font-size: em(14);
@@ -1111,7 +1106,7 @@ SIDEBARS & ASIDES
 		}
 
 	}
-	#tsml {
+	#tsml-sidebar {
 		position: relative;
 		
 		h3 {
@@ -1182,8 +1177,8 @@ FOOTER STYLES
 *********************/
 
 .footer {
-	clear: both;
 	background: $blue;
+
 }
 
 	/*

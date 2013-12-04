@@ -443,18 +443,22 @@ LAYOUT & GRID STYLES
   max-width: 1280px;
 }
 
+.two-lines.mobile {
+  display: none;
+}
+
 #content {
-  margin-top: 5em;
+  position: relative;
+  margin-top: 70px;
+}
+#content .two-lines {
+  display: block;
+  top: 4px;
+  z-index: 100;
 }
 
-#top-lines {
-  margin-bottom: 0;
-}
-
-#main {
-  margin-left: 30%;
-  width: 72%;
-  margin-top: 2.2em;
+#main.eightcol {
+  width: 73%;
 }
 
 /*********************
@@ -465,6 +469,13 @@ HEADER STYLES
   top: 0;
   width: 100%;
   z-index: 800;
+  background: none;
+}
+.header #header-bg {
+  background: #181818;
+  height: 100px;
+  width: 100%;
+  position: absolute;
 }
 .header .nav {
   background: none;
@@ -483,18 +494,64 @@ HEADER STYLES
   padding-left: 0;
 }
 
-/*********************
-NAVIGATION STYLES
-*********************/
 #mobile-menu {
   display: none;
 }
 
-#nav-wrap {
-  width: 70.5%;
-  margin-left: 30.5%;
+#logo-wrapper {
+  display: block;
+  text-align: center;
+  background: url(../images/sidebar-bg.jpg) repeat;
+  max-width: 258px;
+}
+#logo-wrapper .logo {
+  max-width: 258px;
+  width: 100%;
+}
+#logo-wrapper .logo img {
+  width: 105%;
+  margin-left: -5px;
 }
 
+#phone {
+  text-align: center;
+  font-size: 1.6875em;
+  line-height: 1.6875em;
+  font-weight: bold;
+  margin: .5em auto;
+  background: #181818;
+  padding: .5em 0;
+  width: 90%;
+  filter: DropShadow(enabled=false);
+  -moz-text-shadow: none;
+  -webkit-text-shadow: none;
+  -o-text-shadow: none;
+  text-shadow: none;
+}
+#phone a {
+  text-decoration: none;
+  color: #e9e6de;
+  text-align: center;
+}
+#phone a:hover, #phone a:focus {
+  color: #beb8a6;
+}
+#phone span {
+  display: block;
+  font-size: 0.75em;
+  line-height: 0.75em;
+  font-weight: normal;
+  color: #beb8a7;
+  filter: DropShadow(Color=white, OffX=1px, OffY=0.5px);
+  -moz-text-shadow: 0.5px 1px 0 white;
+  -webkit-text-shadow: 0.5px 1px 0 white;
+  -o-text-shadow: 0.5px 1px 0 white;
+  text-shadow: 0.5px 1px 0 white;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
 .nav {
   /* end .menu ul li */
   /* highlight current page */
@@ -554,21 +611,15 @@ NAVIGATION STYLES
 /*********************
 CONTENT AND PAGE STYLES
 *********************/
-#slider {
-  margin-top: 1em;
-}
-
-.entry-title, .single-title {
-  margin-top: 0;
-}
-
 .entry-content h2 {
   margin-top: 0;
   line-height: 2.125em;
 }
 
 .testimonials-page .tsml {
-  width: 33%;
+  width: 27.5%;
+  padding: 2%;
+  margin: 1% 1% 1em;
 }
 .testimonials-page .isotope-item {
   z-index: 2;
@@ -598,19 +649,37 @@ CONTENT AND PAGE STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-.sidebar {
+#sidebar-bg {
+  background: url(../images/sidebar-bg.jpg) repeat;
   position: absolute;
+  max-width: 258px;
+  width: 22%;
   top: 0;
-  z-index: 900;
-  max-width: 250px;
-  margin-top: 0;
+  bottom: 0;
+  z-index: 200;
 }
-.sidebar #logo {
-  display: block;
+
+#sidebar1 {
+  margin-top: -14px;
+  padding-top: 120px;
+  max-width: 258px;
+  z-index: 200;
 }
-.sidebar #logo img {
-  width: 105%;
-  margin-left: -5px;
+
+.reg-position {
+  position: relative;
+  top: 0;
+}
+
+.fixed-at-bottom {
+  position: fixed;
+  width: 22.9282%;
+  max-width: 258px;
+  bottom: -40px;
+}
+
+.sticky-at-bottom {
+  position: absolute;
 }
 
 .widgettitle {

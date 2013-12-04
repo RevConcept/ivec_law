@@ -1,3 +1,6 @@
+<?php 
+	$il_phone = get_field('sidebar_phone', 'options');
+?>
 <!doctype html>
 
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -44,16 +47,31 @@
 		<div id="container">
 
 			<header class="header" role="banner">
+
+				<div id="header-bg"></div><div class="two-lines mobile"></div>
+
 				<div id="inner-header" class="wrap clearfix">
 					<div id="mobile-menu" class="clearfix">
 						<a class="menu-btn">Menu</a>
-						<a class="menu-phone" href="tel:8154399909,callto:8154399909">815.439.9909</a>
-						<a class="logo" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Ivec Law" /></a>
+						<a class="menu-phone" href="tel:<?php if($il_phone) : echo $il_phone; endif; ?>,callto:<?php if($il_phone) : echo $il_phone; endif; ?>"><?php if($il_phone) : echo $il_phone; endif; ?></a>
+						<a class="menu-logo" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Ivec Law" /></a>
+					</div>
+
+					<div id="logo-wrapper" class="threecol first clearfix">
+						<div class="logo">
+							<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Ivec Law PC"/>
+						</div>
+			
+						<?php if( $il_phone ) : ?>
+							<div id="phone" class="widget" class="fixed">
+								<a href="tel:<?php echo $il_phone ?>,callto:<?php echo $il_phone; ?>"> <span class="title">Call</span><?php echo $il_phone; ?></a>
+							</div>
+						<?php endif; ?>
 						
 					</div>
 					
 					
-					<div id="nav-wrap" class="last">
+					<div id="nav-wrap" class="eightcol last">
 						<nav role="navigation">					
 								<?php bones_main_nav(); ?>
 							

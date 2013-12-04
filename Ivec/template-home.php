@@ -13,13 +13,13 @@ Template Name: Home Page
 <?php get_header(); ?>
 
 			<div id="content">
-				<div id="two-lines"></div>
+				<div class="two-lines"></div>
 				
 				<div id="inner-content" class="wrap clearfix">
 
 						<?php get_sidebar(); ?>
 
-						<div id="main" class="clearfix" role="main">
+						<div id="main" class="eightcol last clearfix" role="main">
 
 							<?php get_template_part('part-slider'); ?>
 

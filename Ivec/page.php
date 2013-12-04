@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 			<div id="content">
-				<div id="two-lines"></div>
+				<div class="two-lines"></div>
 
 				<div id="inner-content" class="wrap clearfix">
 					<?php get_sidebar(); ?>

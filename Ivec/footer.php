@@ -1,4 +1,4 @@
-			<div id="two-lines" class="bottom"></div>
+			<div class="two-lines bottom"></div>
 			<footer class="footer" role="contentinfo">
 
 				<div id="inner-footer" class="wrap clearfix">

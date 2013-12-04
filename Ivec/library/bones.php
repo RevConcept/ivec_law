@@ -140,11 +140,24 @@ function bones_scripts_and_styles() {
 		}
 
 		//adding scripts file in the footer
-		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery', 'isotope' ), '', true );
+		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
+		//testimonials page scripts
 		if( is_page('testimonials') ) {
-			wp_register_script( 'isotope', get_stylesheet_directory_uri() . '/library/js/libs/jquery.isotope.min.js', array('jquery'),'1.5.25', true );
+			wp_register_script( 'isotope', get_stylesheet_directory_uri() . '/library/js/libs/jquery.isotope.js', array('jquery'),'', true );
+		
 			wp_enqueue_script( 'isotope' );
+		}
+
+		//nivo slider scripts for home page template
+		if( is_page_template('template-home.php') ) {
+			wp_register_script( 'nivo-slider', get_stylesheet_directory_uri() . '/library/js/libs/jquery.nivo.slider.js', array('jquery'),'', true );
+			wp_register_style( 'nivo-default', get_stylesheet_directory_uri() . '/library/js/libs/nivo/default.css', array('bones-stylesheet'), '', 'all' );
+			wp_register_style( 'nivo-styles', get_stylesheet_directory_uri() . '/library/js/libs/nivo/nivo-slider.css', array('bones-stylesheet'), '', 'all' );
+			
+			wp_enqueue_style( 'nivo-default' );
+			wp_enqueue_style( 'nivo-styles' );
+			wp_enqueue_script( 'nivo-slider' );
 		}
 
 		// enqueue styles and scripts

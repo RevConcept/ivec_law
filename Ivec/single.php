@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
 			<div id="content">
-				<div id="two-lines"></div>
+				<div class="two-lines"></div>
 
 				<div id="inner-content" class="wrap clearfix">
 					<?php get_sidebar(); ?>
 
-					<div id="main" class="eightcol first clearfix" role="main">
+					<div id="main" class="eightcol last clearfix" role="main">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
