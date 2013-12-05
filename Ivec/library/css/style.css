@@ -875,6 +875,7 @@ h1, .h1 {
   font-size: 2.5em;
   line-height: 1.333em;
   font-family: BebasNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #660000;
 }
 
 h2, .h2 {
@@ -882,6 +883,7 @@ h2, .h2 {
   line-height: 1.4em;
   margin-bottom: 0.375em;
   font-family: BebasNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #660000;
 }
 
 h3, .h3 {
@@ -960,13 +962,7 @@ HEADER STYLES
 SLIDER STYLES
 *********************/
 #slider {
-  width: 100%;
-  text-align: center;
   margin-top: 3.5em;
-}
-#slider img {
-  width: 100%;
-  max-width: 844px;
 }
 
 /*********************
@@ -1037,8 +1033,7 @@ POSTS & CONTENT STYLES
   position: relative;
 }
 .two-lines.bottom {
-  margin-bottom: 6px;
-  margin-top: -16px;
+  margin-bottom: 2px;
 }
 .two-lines.mobile {
   top: 154px;
@@ -1062,6 +1057,10 @@ POSTS & CONTENT STYLES
   font-size: 2.5em;
   line-height: 1.5em;
   margin-top: 0;
+}
+.section #comments.h2, .section #comment-form-title.h2 {
+  font-size: 1.75em;
+  line-height: 1.4em;
 }
 .section p {
   line-height: 1.75em;
@@ -1134,10 +1133,6 @@ HOME STYLES
 
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
-.post {
-  margin-top: 2.2em;
-}
-
 /* general post style */
 /* general article on a page style */
 /* general style on an attatchment */
@@ -2126,7 +2121,7 @@ you can add resource intensive styles.
     max-width: 258px;
     width: 22%;
     top: 0;
-    bottom: 0;
+    bottom: -12px;
     z-index: 200;
   }
 
@@ -2144,13 +2139,14 @@ you can add resource intensive styles.
 
   .fixed-at-bottom {
     position: fixed;
-    width: 22.9282%;
+    width: 22.1%;
     max-width: 258px;
-    bottom: -40px;
+    bottom: 0;
   }
 
   .sticky-at-bottom {
     position: absolute;
+    bottom: 0;
   }
 
   .widgettitle {
@@ -2160,7 +2156,7 @@ you can add resource intensive styles.
 
   .widget {
     padding: 0 10px;
-    margin: 4em 0;
+    margin: 4em auto;
   }
   .widget ul li {
     margin-bottom: 0.75em;

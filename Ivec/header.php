@@ -68,8 +68,7 @@
 							</div>
 						<?php endif; ?>
 						
-					</div>
-					
+					</div>				
 					
 					<div id="nav-wrap" class="eightcol last">
 						<nav role="navigation">					

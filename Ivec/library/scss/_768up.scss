@@ -274,15 +274,17 @@ CONTENT AND PAGE STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+
 #sidebar-bg {
 	background: url(../images/sidebar-bg.jpg) repeat;
 	position: absolute;
 	max-width: 258px;
 	width: 22%;
 	top: 0;
-	bottom: 0;
+	bottom: -12px;
 	z-index: 200;
 }
+
 #sidebar1 {
 	margin-top: -14px;
 	padding-top: 120px;
@@ -295,12 +297,13 @@ SIDEBARS & ASIDES
 }
 .fixed-at-bottom {
 	position: fixed;
-	width: 22.9282%;
+	width: 22.1%;
 	max-width: 258px;
-	bottom: -40px;
+	bottom: 0;
 }
 .sticky-at-bottom {
 	position: absolute;
+	bottom: 0;
 }
 
 
@@ -311,7 +314,7 @@ SIDEBARS & ASIDES
 
 	.widget {
 		padding: 0 10px;
-		margin: 4em 0;
+		margin: 4em auto;
 
 		ul {
 			li {

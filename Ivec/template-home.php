@@ -140,13 +140,13 @@ Template Name: Home Page
 								</div>
 							</div>
 
-							<div class="section" id="case-eval">
-								<?php if( $il_ce_image ) : ?>
+							<?php if( $il_ce_image ) : ?>
+								<div class="section" id="case-eval">
 									<div class="img-wrap">
 										<img src="<?php echo $il_ce_image; ?>" alt="" />
 									</div>
-								<?php endif; ?>
-							</div>
+								</div>
+							<?php endif; ?>
 
 						</div>
 
