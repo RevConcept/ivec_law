@@ -8,6 +8,9 @@
 
 						<div id="main" class="eightcol last clearfix" role="main">
 
+							<h1 class="entry-title single-title" itemprop="headline">Articles</h1>
+							<div class="section">
+
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
@@ -65,7 +68,7 @@
 
 						</div>
 
-						
+						</div>
 
 				</div>
 

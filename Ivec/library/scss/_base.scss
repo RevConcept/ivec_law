@@ -378,6 +378,12 @@ POSTS & CONTENT STYLES
 	p {
 		line-height: 1.75em;
 	}
+	#comments.h2 {
+		font-size: 1.75em;
+	}
+	#comment-form-title.h2 {
+		font-size: 1.75em;
+	}
 
 }
 
@@ -495,7 +501,7 @@ HOME STYLES
 		}
 		.entry-title, .single-title {
 			margin-top: 1em;
-			line-height: 1em;
+			line-height: 1.333em;
 		}
 
 		/* entry content */
