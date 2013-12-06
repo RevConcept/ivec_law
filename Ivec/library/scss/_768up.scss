@@ -290,15 +290,17 @@ CONTENT AND PAGE STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+
 #sidebar-bg {
 	background: url(../images/sidebar-bg.jpg) repeat;
 	position: absolute;
 	max-width: 258px;
 	width: 22%;
 	top: 0;
-	bottom: 0;
+	bottom: -12px;
 	z-index: 200;
 }
+
 #sidebar1 {
 	display: block;
 	margin-top: -14px;
@@ -311,13 +313,23 @@ SIDEBARS & ASIDES
 	top: 0;
 }
 .fixed-at-bottom {
+<<<<<<< HEAD
 	/*position: fixed;*/
 	/*width: 22.9282%;*/ /* Testing another option for this scrolling */
+=======
+	position: fixed;
+	width: 22.1%;
+>>>>>>> 404509e7d919e88a0a4a91c82e1c9fb238386615
 	max-width: 258px;
-	bottom: -40px;
+	bottom: 0;
 }
 .sticky-at-bottom {
+<<<<<<< HEAD
 	/*position: absolute;*/
+=======
+	position: absolute;
+	bottom: 0;
+>>>>>>> 404509e7d919e88a0a4a91c82e1c9fb238386615
 }
 
 
@@ -328,7 +340,7 @@ SIDEBARS & ASIDES
 
 	.widget {
 		padding: 0 10px;
-		margin: 4em 0;
+		margin: 4em auto;
 
 		ul {
 			li {

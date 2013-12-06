@@ -1,9 +1,5 @@
 <?php get_header(); ?>
 
-<?php $pa_list_img = get_field('pa_list_image', 'option'); 
-      $pa_callout = get_field('pa_callout'); 
-      $pa_img = get_field('pa_img'); ?>
-
 			<div id="content">
 				<div class="two-lines"></div>
 
@@ -14,7 +10,11 @@
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-						<?php $curr_post_slug = $post->post_name; ?>
+						<?php $curr_post_slug = $post->post_name; 
+								$pa_list_img = get_field('pa_list_image', 'option'); 
+      							$pa_callout = get_field('pa_callout');
+      							$pa_img = get_field('pa_img');
+      							$il_ce_image = get_field('ce_image'); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -49,12 +49,36 @@
 									<h2><?php the_title(); ?></h2>
 
 									<?php if( $pa_callout ) : ?>
+<<<<<<< HEAD
 										<?php echo $pa_callout; ?>
+=======
+										<blockquote>
+											<?php echo $pa_callout; ?>
+											<?php if( $pa_img ) : ?>
+												<div class="img-wrap">
+													<img src="<?php echo $pa_img; ?>" alt="" />
+												</div>
+											<?php endif; ?>
+										</blockquote>
+>>>>>>> 404509e7d919e88a0a4a91c82e1c9fb238386615
 									<?php endif; ?>
 
+<<<<<<< HEAD
 									<?php if( get_field('case_evaluation') == 'yes' ) : ?>
 
 										<?php get_template_part( 'part', 'evaluation' ); ?>
+=======
+								<?php if( $il_ce_image ) : ?>
+									<div class="section" id="case-eval">
+										<div class="img-wrap">
+											<img src="<?php echo $il_ce_image; ?>" alt="" />
+										</div>
+									</div>
+								<?php endif; ?>
+
+								<footer class="article-footer">
+									<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
+>>>>>>> 404509e7d919e88a0a4a91c82e1c9fb238386615
 
 									<?php endif; ?>
 
@@ -78,8 +102,6 @@
 						<?php endif; ?>
 
 					</div>
-
-					
 
 				</div>
 
