@@ -7,7 +7,7 @@ Template Name: Home Page
 	$il_pa_image = get_field('pa_image');
 	$il_pa_title = get_field('pa_title');
 	$il_pa_content = get_field('pa_content');
-	$il_ce_image = get_field('ce_image');
+	$case_evaluation = get_field('case_evaluation');
 
 ?>
 <?php get_header(); ?>
@@ -19,7 +19,7 @@ Template Name: Home Page
 
 						<?php get_sidebar(); ?>
 
-						<div id="main" class="eightcol last clearfix" role="main">
+						<div id="main" class="ninecol last clearfix" role="main">
 
 							<?php get_template_part('part-slider'); ?>
 
@@ -87,11 +87,11 @@ Template Name: Home Page
 
 							<div class="section clearfix" id="practice-areas">
 								<?php if ( $il_pa_image ) : ?>
-									<div class="img-wrap fourcol first">
+									<div class="img-wrap threecol first">
 										<img src="<?php echo $il_pa_image; ?>" alt="" />
 									</div>
 								<?php endif; ?>
-								<div class="content-wrap eightcol last">
+								<div class="content-wrap ninecol last">
 									<?php if( $il_pa_title ) : ?>
 										<h3 class="h2"><?php echo $il_pa_title; ?></h3>
 									<?php endif; ?>
@@ -140,13 +140,12 @@ Template Name: Home Page
 								</div>
 							</div>
 
-							<div class="section" id="case-eval">
-								<?php if( $il_ce_image ) : ?>
-									<div class="img-wrap">
-										<img src="<?php echo $il_ce_image; ?>" alt="" />
-									</div>
-								<?php endif; ?>
-							</div>
+
+							<?php if( $case_evaluation == 'yes' ) : ?>
+
+								<?php get_template_part( 'part', 'evaluation' ); ?>
+
+							<?php endif; ?>
 
 						</div>
 

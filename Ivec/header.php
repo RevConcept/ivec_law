@@ -51,6 +51,7 @@
 				<div id="header-bg"></div><div class="two-lines mobile"></div>
 
 				<div id="inner-header" class="wrap clearfix">
+					
 					<div id="mobile-menu" class="clearfix">
 						<a class="menu-btn">Menu</a>
 						<a class="menu-phone" href="tel:<?php if($il_phone) : echo $il_phone; endif; ?>,callto:<?php if($il_phone) : echo $il_phone; endif; ?>"><?php if($il_phone) : echo $il_phone; endif; ?></a>
@@ -64,14 +65,16 @@
 			
 						<?php if( $il_phone ) : ?>
 							<div id="phone" class="widget" class="fixed">
-								<a href="tel:<?php echo $il_phone ?>,callto:<?php echo $il_phone; ?>"> <span class="title">Call</span><?php echo $il_phone; ?></a>
+								<div class="wrap">
+									<a href="tel:<?php echo $il_phone ?>,callto:<?php echo $il_phone; ?>"> <span class="title">Call</span><?php echo $il_phone; ?></a>
+								</div>
 							</div>
 						<?php endif; ?>
 						
 					</div>
 					
 					
-					<div id="nav-wrap" class="eightcol last">
+					<div id="nav-wrap" class="ninecol last">
 						<nav role="navigation">					
 								<?php bones_main_nav(); ?>
 							

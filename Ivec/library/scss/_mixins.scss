@@ -62,7 +62,7 @@ $white:             #fff;
 $bones-pink:        #f01d4f;
 $bones-blue:        #1990db;
 
-$blue: 				#181818;
+$dark: 				#181818;
 $tan:				#beb8a6;
 $red:				#660000;
 $sidebar-color:		#19120c;
@@ -72,7 +72,7 @@ $nav-color:			#f2f2f0;
 $call-color:		#beb8a7;
 $testimonial-color:	#19120c;
 
-$link-color:        $bones-pink;
+$link-color:        $red;
 $link-hover:        darken(#333333, 9%);
 
 
@@ -90,7 +90,10 @@ TYPOGRAPHY
 $sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
 $title: 			BebasNeue, $sans-serif;
-$content:			calisto, $serif;
+$content:			"Calisto MT W01", $serif;
+$content-bold:		"Calisto MT W01 Bold", $serif;
+$content-italic: 	"Calisto MT W01 Italic", $serif;
+$content-bi: 		"CalistoMTW01-BoldItalic", $serif;
 
 
 /* 	To embed your own fonts, use this syntax
@@ -100,28 +103,6 @@ $content:			calisto, $serif;
 	http://www.fontsquirrel.com/
 	Be sure to remove the comment brackets.
 */
-
-	@font-face {
-    	font-family: 'calisto';
-    	src: url('../fonts/CALIST.eot');
-    	src: url('../fonts/CALIST.eot?#iefix') format('embedded-opentype'),
-             url('../fonts/CALIST.woff') format('woff'),
-             url('../fonts/CALIST.TTF') format('truetype'),
-             url('../fonts/CALIST.svg#CALIST') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
-
-	@font-face {
-    	font-family: 'calisti';
-    	src: url('../fonts/calisti.eot');
-    	src: url('../fonts/calisti.eot?#iefix') format('embedded-opentype'),
-             url('../fonts/calisti.woff') format('woff'),
-             url('../fonts/calisti.TTF') format('truetype'),
-             url('../fonts/calisti.svg#calisti') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
 
 	@font-face {
     	font-family: 'BebasNeue';

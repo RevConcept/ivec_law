@@ -20,13 +20,13 @@
 
 								<section class="entry-content clearfix section" itemprop="articleBody">
 									<?php the_content(); ?>
-							</section>
+								</section>
 
-								<footer class="article-footer">
-									<?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
+								<?php if( get_field('case_evaluation') == 'yes' ) : ?>
 
-								</footer>
+									<?php get_template_part( 'part', 'evaluation' ); ?>
 
+								<?php endif; ?>
 								
 
 							</article>
@@ -47,9 +47,7 @@
 
 							<?php endif; ?>
 
-						</div>
-
-						
+						</div>	
 
 				</div>
 

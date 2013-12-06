@@ -33,6 +33,7 @@ LAYOUT & GRID STYLES
 }
 #content {
 	position: relative;
+	padding-top: 0px;
 	margin-top: 70px;
 
 	.two-lines {
@@ -58,7 +59,6 @@ HEADER STYLES
 	background: none;
 
 	#header-bg {
-		background: $blue;
 		height: 100px;
 		width: 100%;
 		position: absolute;
@@ -68,10 +68,9 @@ HEADER STYLES
 		background: none;
 		margin: 1.2em auto;
 		padding-bottom: 0;
-		text-align: center;
 		width: 100%;
 		li {
-			padding: 0 2%;
+			padding: 0 4% 0 0;
 			a {
 				padding: 0;
 			}
@@ -86,6 +85,15 @@ HEADER STYLES
 #mobile-menu {
 	display: none;
 }
+
+.menu-logo {
+	display: block;
+	max-width: 258px;
+	img {
+		width: 100%;
+	}
+}
+
 #logo-wrapper {
 	display: block;
 	text-align: center;
@@ -107,10 +115,16 @@ HEADER STYLES
 	line-height: em(27);
 	font-weight: bold;
 	margin: .5em auto;
-	background: $blue;
-	padding: .5em 0;
+	padding: .8em .5em .5em;
+	background: $dark url(../images/bg-black.png) repeat;
 	width: 90%;
-	@include x-text-shadow();
+
+	.wrap {
+		padding-bottom: 5px;
+		border-top: 1px solid $call-color;
+		border-bottom: 1px solid $call-color;
+	}
+
 	a {
 		text-decoration: none;
 		color: $phone-color;
@@ -121,11 +135,13 @@ HEADER STYLES
 	}
 	span {
 		display: block;
+		width: 45px;
+		margin: -7px auto 0px;
 		font-size: em(12);
 		line-height: em(12);
 		font-weight: normal;
 		color: $call-color;
-		@include text-shadow( .5px, 1px, 0, #ffffff );
+		background: $dark url(../images/bg-black.png) repeat;
 	}
 }
 
@@ -284,8 +300,9 @@ SIDEBARS & ASIDES
 	z-index: 200;
 }
 #sidebar1 {
+	display: block;
 	margin-top: -14px;
-	padding-top: 120px;
+	padding-top: 155px;
 	max-width: 258px;
 	z-index: 200;
 }
@@ -294,13 +311,13 @@ SIDEBARS & ASIDES
 	top: 0;
 }
 .fixed-at-bottom {
-	position: fixed;
-	width: 22.9282%;
+	/*position: fixed;*/
+	/*width: 22.9282%;*/ /* Testing another option for this scrolling */
 	max-width: 258px;
 	bottom: -40px;
 }
 .sticky-at-bottom {
-	position: absolute;
+	/*position: absolute;*/
 }
 
 

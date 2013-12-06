@@ -28,8 +28,8 @@
 					
 									<div class="pa-list fourcol last" id="pa-page">
 
-										<?php if( $pa_list_img ) : ?>
-											<div class="img-wrap aligncenter"><img src="<?php echo $pa_list_img; ?>" alt="" /></div>
+										<?php if( $pa_img ) : ?>
+											<div class="img-wrap aligncenter"><img src="<?php echo $pa_img; ?>" alt="<?php the_title(); ?>" /></div>
 										<?php endif; ?>
 
 										<?php $args = array( 'post_type' => 'practice-areas', 'post_status' => 'publish', 'numberposts' => -1 );
@@ -47,22 +47,18 @@
 											<?php endif; ?>
 									</div>
 									<h2><?php the_title(); ?></h2>
-									<?php the_content(); ?>
 
 									<?php if( $pa_callout ) : ?>
-										<blockquote>
-											<?php echo $pa_callout; ?>
-											<div class="img-wrap">
-												<img src="<?php echo $pa_img; ?>" alt="" />
-											</div>
-										</blockquote>
+										<?php echo $pa_callout; ?>
 									<?php endif; ?>
+
+									<?php if( get_field('case_evaluation') == 'yes' ) : ?>
+
+										<?php get_template_part( 'part', 'evaluation' ); ?>
+
+									<?php endif; ?>
+
 								</section>
-
-								<footer class="article-footer">
-									<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-								</footer>
 
 							</article>
 

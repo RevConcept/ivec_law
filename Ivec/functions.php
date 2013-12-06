@@ -160,9 +160,10 @@ function bones_wpsearch($form) {
 
 if( function_exists('acf_add_options_sub_page') )
 {
+	acf_add_options_sub_page( 'Slider' );
 	acf_add_options_sub_page( 'Left Sidebar' );
 	acf_add_options_sub_page( 'Practice Area Menu' );
-    acf_add_options_sub_page( 'Slider' );
+    acf_add_options_sub_page( 'Case Evaluation' );
 }
 
 
