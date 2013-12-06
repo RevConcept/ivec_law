@@ -440,28 +440,29 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
+
 .footer {
+	position: relative;
+	z-index: 10;
+
+	nav {
+		ul {
+			li {
+				display: block;
+
+				a {
+					padding: 0px;
+					font-family: $content;
+					text-transform: none;
+					font-size: 1em;
+
+					&:hover {}
+				}
+
+				ul {}
+			}
+		}
+	} /* end .footer-links */
 
 }
-
-.footer-links {
-	ul {
-		li {
-			a {
-				&:hover {}
-			}
-			/*
-			be careful with the depth of your menus.
-			it's very rare to have multi-depth menus in
-			the footer.
-			*/
-			ul {}
-		}
-	}
-} /* end .footer-links */
 

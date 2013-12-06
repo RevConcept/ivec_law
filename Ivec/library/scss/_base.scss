@@ -703,6 +703,7 @@ HOME STYLES
 .pa-list {
 	background: url(../images/list-bg.jpg) repeat;
 	padding: 1em;
+	margin-bottom: 20px;
 	font-family: $title;
 	font-size: em(20);
 	line-height: 1em;
@@ -1261,22 +1262,21 @@ FOOTER STYLES
 .footer {
 	background: $dark url(../images/bg-black.png) repeat;
 	min-height: 200px;
+
+	h3 {
+		margin-bottom: 0px;
+		font-size: 2em;
+		color: $tan;
+	}
 }
 
-	/*
-	if you checked out the link above:
-	http://www.alistapart.com/articles/organizing-mobile/
-	you'll want to style the footer nav
-	a bit more in-depth. Remember to keep
-	it simple because you'll have to
-	override these styles for the desktop
-	view.
-	*/
 	.footer-links {
 
 		ul {
 
-			li {}
+			li {
+			
+			}
 
 		}
 
