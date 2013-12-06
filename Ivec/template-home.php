@@ -140,20 +140,11 @@ Template Name: Home Page
 								</div>
 							</div>
 
-<<<<<<< HEAD
 
 							<?php if( $case_evaluation == 'yes' ) : ?>
 
 								<?php get_template_part( 'part', 'evaluation' ); ?>
 
-=======
-							<?php if( $il_ce_image ) : ?>
-								<div class="section" id="case-eval">
-									<div class="img-wrap">
-										<img src="<?php echo $il_ce_image; ?>" alt="" />
-									</div>
-								</div>
->>>>>>> 404509e7d919e88a0a4a91c82e1c9fb238386615
 							<?php endif; ?>
 
 						</div>

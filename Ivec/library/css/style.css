@@ -775,25 +775,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 h1, .h1 {
   font-size: 2.5em;
   line-height: 1.333em;
-<<<<<<< HEAD
   font-family: BebasNeue, "Helvetica Neue", Helvetica, Arial, sans-serif; }
-=======
-  font-family: BebasNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #660000;
-}
->>>>>>> 404509e7d919e88a0a4a91c82e1c9fb238386615
 
 h2, .h2 {
   font-size: 1.75em;
   line-height: 1.4em;
   margin-bottom: 0.375em;
-<<<<<<< HEAD
   font-family: BebasNeue, "Helvetica Neue", Helvetica, Arial, sans-serif; }
-=======
-  font-family: BebasNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #660000;
-}
->>>>>>> 404509e7d919e88a0a4a91c82e1c9fb238386615
 
 h3, .h3 {
   font-size: 1.125em;
@@ -874,17 +862,12 @@ HEADER STYLES
 SLIDER STYLES
 *********************/
 #slider {
-<<<<<<< HEAD
   width: 100%;
   text-align: center;
   margin-top: 3.5em; }
   #slider img {
     width: 100%;
     max-width: 844px; }
-=======
-  margin-top: 3.5em;
-}
->>>>>>> 404509e7d919e88a0a4a91c82e1c9fb238386615
 
 /*********************
 NAVIGATION STYLES
@@ -946,24 +929,12 @@ POSTS & CONTENT STYLES
   background: url(../images/top-lines.png) repeat-x;
   height: 10px;
   width: 100%;
-<<<<<<< HEAD
   position: relative; }
   .two-lines.bottom {
     margin-bottom: 6px;
     margin-top: -16px; }
   .two-lines.mobile {
     display: none; }
-=======
-  position: relative;
-}
-.two-lines.bottom {
-  margin-bottom: 2px;
-}
-.two-lines.mobile {
-  top: 154px;
-  z-index: -1;
-}
->>>>>>> 404509e7d919e88a0a4a91c82e1c9fb238386615
 
 #main h3 {
   color: #660000; }
@@ -971,7 +942,6 @@ POSTS & CONTENT STYLES
 .section {
   padding: 3.5em 0 2em;
   margin: 2em 0;
-<<<<<<< HEAD
   background: url(../images/section-separator.png) no-repeat top center; }
   .section h3 {
     font-size: 1.875em;
@@ -982,26 +952,6 @@ POSTS & CONTENT STYLES
       margin-top: 0; }
   .section p {
     line-height: 1.75em; }
-=======
-  background: url(../images/section-separator.png) no-repeat top center;
-}
-.section h3 {
-  font-size: 1.875em;
-  line-height: 1em;
-}
-.section h3.h2 {
-  font-size: 2.5em;
-  line-height: 1.5em;
-  margin-top: 0;
-}
-.section #comments.h2, .section #comment-form-title.h2 {
-  font-size: 1.75em;
-  line-height: 1.4em;
-}
-.section p {
-  line-height: 1.75em;
-}
->>>>>>> 404509e7d919e88a0a4a91c82e1c9fb238386615
 
 /*********************
 HOME STYLES
@@ -1068,12 +1018,9 @@ HOME STYLES
 
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
-<<<<<<< HEAD
 .post {
   margin-top: 2.2em; }
 
-=======
->>>>>>> 404509e7d919e88a0a4a91c82e1c9fb238386615
 /* general post style */
 /* general article on a page style */
 /* general style on an attatchment */
@@ -1961,14 +1908,8 @@ you can add resource intensive styles.
     max-width: 258px;
     width: 22%;
     top: 0;
-<<<<<<< HEAD
     bottom: 0;
     z-index: 200; }
-=======
-    bottom: -12px;
-    z-index: 200;
-  }
->>>>>>> 404509e7d919e88a0a4a91c82e1c9fb238386615
 
   #sidebar1 {
     display: block;
@@ -1982,7 +1923,6 @@ you can add resource intensive styles.
     top: 0; }
 
   .fixed-at-bottom {
-<<<<<<< HEAD
     /*position: fixed;*/
     /*width: 22.9282%;*/
     /* Testing another option for this scrolling */
@@ -1991,18 +1931,6 @@ you can add resource intensive styles.
 
   .sticky-at-bottom {
     /*position: absolute;*/ }
-=======
-    position: fixed;
-    width: 22.1%;
-    max-width: 258px;
-    bottom: 0;
-  }
-
-  .sticky-at-bottom {
-    position: absolute;
-    bottom: 0;
-  }
->>>>>>> 404509e7d919e88a0a4a91c82e1c9fb238386615
 
   .widgettitle {
     border-bottom: 2px solid #444;
@@ -2010,7 +1938,6 @@ you can add resource intensive styles.
 
   .widget {
     padding: 0 10px;
-<<<<<<< HEAD
     margin: 4em 0; }
     .widget ul li {
       margin-bottom: 0.75em;
@@ -2018,18 +1945,6 @@ you can add resource intensive styles.
       .widget ul li ul {
         margin-top: 0.75em;
         padding-left: 1em; }
-=======
-    margin: 4em auto;
-  }
-  .widget ul li {
-    margin-bottom: 0.75em;
-    /* deep nesting */
-  }
-  .widget ul li ul {
-    margin-top: 0.75em;
-    padding-left: 1em;
-  }
->>>>>>> 404509e7d919e88a0a4a91c82e1c9fb238386615
 
   /* links widget */
   /* meta widget */

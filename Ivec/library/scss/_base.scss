@@ -127,7 +127,6 @@ h1, .h1 {
 	font-size: 2.5em;
 	line-height: 1.333em;
 	font-family: $title;
-	color: $red;
 }
 
 h2, .h2 {
@@ -135,7 +134,6 @@ h2, .h2 {
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
 	font-family: $title;
-	color: $red;
 }
 
 h3, .h3 {
@@ -237,9 +235,14 @@ HEADER STYLES
 /*********************
 SLIDER STYLES
 *********************/
-
 #slider {
+	width: 100%;
+	text-align: center;
 	margin-top: 3.5em;
+	img {
+		width: 100%;
+		max-width: 844px;
+	}
 }
 
 /*********************
@@ -345,7 +348,8 @@ POSTS & CONTENT STYLES
 	position: relative;
 	
 	&.bottom {
-		margin-bottom: 2px;
+		margin-bottom: 6px;
+		margin-top: -16px;
 	}
 
 	&.mobile {
@@ -370,10 +374,6 @@ POSTS & CONTENT STYLES
 			line-height: 1.5em;
 			margin-top: 0;
 		}
-	}
-	#comments.h2, #comment-form-title.h2 {
-		font-size: 1.75em;
-		line-height: 1.4em;
 	}
 	p {
 		line-height: 1.75em;
@@ -478,7 +478,8 @@ HOME STYLES
 		/* want to style individual post classes? Booya! */
 		.post-id {}         /* post by id (i.e. post-3) */
 		.post {
-		}            /* general post style */
+			margin-top: 2.2em;
+			}            /* general post style */
 		.page {}            /* general article on a page style */
 		.attachment {}      /* general style on an attatchment */
 		.sticky {}          /* sticky post style */

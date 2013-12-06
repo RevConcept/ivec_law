@@ -15,9 +15,7 @@
 
 					<div id="main" class="eightcol last clearfix" role="main">
 						
-							<?php	if (have_posts()) : while (have_posts()) : the_post(); 
-
-									$il_ce_image = get_field('ce_image'); ?>
+							<?php	if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 
 									<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix testimonials-page'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
@@ -75,14 +73,6 @@
 													
 													</div>
 
-													<?php if( $il_ce_image ) : ?>
-														<div class="section" id="case-eval">
-															<div class="img-wrap">
-																<img src="<?php echo $il_ce_image; ?>" alt="" />
-															</div>
-														</div>
-													<?php endif; ?>
-
 											<?php else : ?>
 												<article id="post-not-found" class="hentry clearfix">
 													<section class="entry-content section">
@@ -92,6 +82,7 @@
 											<?php endif; ?>
 
 										</section>
+
 
 										<footer class="article-footer">
 											<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
@@ -111,6 +102,7 @@
 								</article>
 
 							<?php endif;  ?>
+						
 
 					</div>
 

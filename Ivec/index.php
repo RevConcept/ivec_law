@@ -8,13 +8,7 @@
 
 						<div id="main" class="eightcol last clearfix" role="main">
 
-							<h1 class="entry-title single-title" itemprop="headline">Articles</h1>
-
-							<div class="section">
-
-							<?php if (have_posts()) : while (have_posts()) : the_post(); 
-
-									$il_ce_image - get_field('ce_image'); ?>
+							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 
@@ -31,14 +25,6 @@
 									<?php the_content(); ?>
 								</section>
 
-								<?php if( $il_ce_image ) : ?>
-									<div class="section" id="case-eval">
-										<div class="img-wrap">
-											<img src="<?php echo $il_ce_image; ?>" alt="" />
-										</div>
-									</div>
-								<?php endif; ?>
-
 								<footer class="article-footer">
 									<p class="tags"><?php the_tags( '<span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?></p>
 
@@ -47,7 +33,6 @@
 								<?php // comments_template(); // uncomment if you want to use them ?>
 
 							</article>
-
 
 							<?php endwhile; ?>
 
@@ -66,18 +51,17 @@
 
 									<article id="post-not-found" class="hentry clearfix">
 											<header class="article-header">
-												<h1 class="h2">No Articles Yet</h1>
+												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 										</header>
 											<section class="entry-content">
-												<p>We haven't posted any articles yet. We'll be posting articles shortly.</p>
+												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
 										</section>
 										<footer class="article-footer">
-												
+												<p><?php _e( 'This is the error message in the index.php template.', 'bonestheme' ); ?></p>
 										</footer>
 									</article>
-							
+
 							<?php endif; ?>
-							</div>
 
 						</div>
 

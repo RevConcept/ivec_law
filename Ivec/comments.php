@@ -56,7 +56,7 @@ The comments page for Bones
 
 <?php if ( comments_open() ) : ?>
 
-<section id="respond" class="respond-form section">
+<section id="respond" class="respond-form">
 
 	<h3 id="comment-form-title" class="h2"><?php comment_form_title( __( 'Leave a Reply', 'bonestheme' ), __( 'Leave a Reply to %s', 'bonestheme' )); ?></h3>
 

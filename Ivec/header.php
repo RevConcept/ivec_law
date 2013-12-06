@@ -71,7 +71,8 @@
 							</div>
 						<?php endif; ?>
 						
-					</div>				
+					</div>
+					
 					
 					<div id="nav-wrap" class="ninecol last">
 						<nav role="navigation">					
