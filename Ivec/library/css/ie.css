@@ -146,46 +146,17 @@ probably best not to use it. I mean, were you going to anyway? */
 /*********************
 BUTTONS
 *********************/
-.button, .button:visited {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border: 1px solid #240000;
-  border-top-color: #420000;
-  border-left-color: #420000;
-  padding: 4px 12px;
-  color: white;
-  display: inline-block;
-  font-size: 11px;
-  font-weight: bold;
+.button, .button:visited, #slider span {
+  background: #660000;
+  font-family: BebasNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #f2f2f0;
   text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
-  cursor: pointer;
-  margin-bottom: 20px;
-  line-height: 21px;
-  border-radius: 4px;
-  background-color: #4d0000;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#660000), to(#4d0000));
-  background-image: -webkit-linear-gradient(top, #660000, #4d0000);
-  background-image: -moz-linear-gradient(top, #660000, #4d0000);
-  background-image: -o-linear-gradient(top, #660000, #4d0000);
-  background-image: linear-gradient(to bottom, #660000, #4d0000); }
-  .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
-    color: white;
-    border: 1px solid #240000;
-    border-top-color: black;
-    border-left-color: black;
-    background-color: #330000;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#4d0000), to(#330000));
-    background-image: -webkit-linear-gradient(top, #4d0000, #330000);
-    background-image: -moz-linear-gradient(top, #4d0000, #330000);
-    background-image: -o-linear-gradient(top, #4d0000, #330000);
-    background-image: linear-gradient(to bottom, #4d0000, #330000); }
-  .button:active, .button:visited:active {
-    background-color: #660000;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#4d0000), to(#660000));
-    background-image: -webkit-linear-gradient(top, #4d0000, #660000);
-    background-image: -moz-linear-gradient(top, #4d0000, #660000);
-    background-image: -o-linear-gradient(top, #4d0000, #660000);
-    background-image: linear-gradient(to bottom, #4d0000, #660000); }
+  border: 0;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  padding: .2em .9em; }
+  .button:hover, .button:focus, .button:visited:hover, .button:visited:focus, #slider span:hover, #slider span:focus {
+    color: #beb8a6; }
 
 .blue-button, .blue-button:visited {
   border-color: #1472ad;
@@ -619,6 +590,12 @@ FOOTER STYLES
   position: relative;
   z-index: 10;
   /* end .footer-links */ }
+  .footer .threecol {
+    display: block;
+    padding: 0px 20px 30px;
+    background: url(../images/bg-footer-nav.jpg) repeat-y; }
+  .footer .address {
+    margin: 70px auto 0px; }
   .footer nav ul li {
     display: block; }
     .footer nav ul li a {

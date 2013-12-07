@@ -2,7 +2,7 @@
 /* 
 Template Name: Home Page
 */
-
+	$home_slider = get_field('home_slider');
 	$il_cta_boxes = get_field('cta_boxes');
 	$il_pa_image = get_field('pa_image');
 	$il_pa_title = get_field('pa_title');
@@ -21,7 +21,11 @@ Template Name: Home Page
 
 						<div id="main" class="ninecol last clearfix" role="main">
 
-							<?php get_template_part('part-slider'); ?>
+							<div id="slider">
+
+								<?php echo do_shortcode($home_slider); ?>
+
+							</div>
 
 							<div class="section" id="boxes">
 								<?php 

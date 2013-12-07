@@ -40,6 +40,7 @@
 											
 											<?php $tsml_posts = get_posts( array(
 																			'post_type' => 'testimonials',
+																			'orderby' => 'rand',
 																			'post_status' => 'publish',
 																			'numberposts' => -1
 																));

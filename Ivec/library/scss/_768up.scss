@@ -243,6 +243,8 @@ NAVIGATION STYLES
 
 } /* end .nav */
 
+
+
 /*********************
 CONTENT AND PAGE STYLES
 *********************/
@@ -444,6 +446,16 @@ FOOTER STYLES
 .footer {
 	position: relative;
 	z-index: 10;
+
+	.threecol {
+		display: block;
+		padding: 0px 20px 30px;
+		background: url(../images/bg-footer-nav.jpg) repeat-y;
+	}
+
+	.address {
+		margin: 70px auto 0px;
+	}
 
 	nav {
 		ul {

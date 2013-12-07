@@ -3,14 +3,35 @@
 
 				<div id="inner-footer" class="wrap clearfix">
 
-					<h3>Site Navigation</h3>
-					<nav role="navigation">
-						<?php bones_footer_links(); ?>
-					</nav>
+					<div class="threecol first clearfix" >
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+						<h3>Site Navigation</h3>
+						<nav role="navigation">
+							<?php bones_footer_links(); ?>
+						</nav>
 
-				</div>
+					</div>
+
+					<div class="ninecol last clearfix" >
+
+						<div class="address clearfix">
+
+							<div class="street-num">
+								<?php the_field('footer_street_number', 'options'); ?>
+							</div>
+
+							<div class="street-name">
+								<?php the_field('footer_street_address', 'options'); ?><br />
+								<span><?php the_field('footer_cs', 'options'); ?></span>
+							</div>
+
+						</div><!--end address-->
+
+						<p class="source-org copyright">Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>. Site by <a href="http://revelationconcept.com" target="_blank">Revelation Concept</a>.</p>
+
+					</div>
+
+				</div><!--end wrap-->
 
 			</footer>
 
