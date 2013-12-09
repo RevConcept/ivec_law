@@ -135,13 +135,13 @@ jQuery(document).ready(function($) {
 				} else {
 					window_scroll = y;
 				}
+
 				tsml_location = this.tsml_top - window_scroll;
-				if(window_scroll == 0) {
+
+				if(tsml_location > this.logo_wrap_height) {
 					this.set_scrolling_tsml();
-				} else if(window_scroll >= 0 && tsml_location < this.logo_wrap_height) {
+				} else if(tsml_location <= this.logo_wrap_height) {
 					this.set_fixed_tsml();
-				} else if(tsml_location >= this.logo_wrap_height ) {
-					this.set_scrolling_tsml();
 			    } else {
 			    	this.set_scrolling_tsml();
 			    }
@@ -150,7 +150,6 @@ jQuery(document).ready(function($) {
 
 		window.ivec_sidebar = ivec_sidebar;
 		ivec_sidebar.init();
-		console.log(ivec_sidebar);
 		
 		
 		$(window).scroll(function (event) {
@@ -191,6 +190,11 @@ jQuery(document).ready(function($) {
 			  return false;
 			});
 		}
+
+		//sidebar testimonial fade in/out
+		$('.tsml-wrap').cycle();
+
+
  
 }); /* end of as page load scripts */
 

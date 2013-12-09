@@ -2,7 +2,6 @@
 					
 						$il_contact_text = get_field('sidebar_contact_form_text', 'options');
 						$il_contact_form = get_field('sidebar_contact_form', 'options');
-						$il_testimonial = get_field('sidebar_testimonial', 'options');
 						$il_phone = get_field('sidebar_phone', 'options');
 					
 				?>
@@ -25,6 +24,7 @@
 						</div>
 
 						<div class="sidebar-scroll">
+							
 							<?php if( $il_contact_form ) : ?>
 								<div id="contact" class="widget">
 									<?php echo $il_contact_text; ?>
@@ -32,15 +32,33 @@
 								</div>
 							<?php endif; ?>
 
-							<?php if( $il_testimonial ) : ?>
-								<div id="tsml-sidebar" class="widget">
+							<?php $il_testimonials = get_posts(array(
+														'post_type' => 'testimonials',
+														'post_status' => 'publish'
+													)); ?>
 
-									<h3 class="title"><?php echo $il_testimonial->post_title; ?></h3>
-									<p>
-										<span class="q-left"></span><span class="q-right"></span>
-										<?php  echo wp_trim_words($il_testimonial->post_content, 30, ' [...]'); ?></p>
-									<p><a class="btn" href="<?php echo bloginfo('url') ?>/testimonials/">Read More</a></p>
+							<?php if( $il_testimonials ) : ?>
+								<div id="tsml-sidebar" class="widget">
+									<div class="tsml-wrap">
+									
+									<?php foreach($il_testimonials as $key => $testimonial ) :  
+										$tsml_title = get_field('tsml_title', $testimonial->ID);
+										$tsml_content = get_field('tsml_content', $testimonial->ID); ?>
+
+											<div class="inner-tsml">
+												<h3 class="title"><?php echo $tsml_title; ?></h3>
+												<p><span class="q-left"></span><span class="q-right"></span>
+													<?php  echo wp_trim_words($tsml_content, 30, ' [...]'); ?>
+												</p>
+												<p><a class="btn" href="<?php echo bloginfo('url') ?>/testimonials/">Read More</a></p>
+											</div>
+											
+									<?php endforeach; ?>
+									</div>
+									
+									
 								</div>
+
 							<?php endif; ?>
 						</div>
 

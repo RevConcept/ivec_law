@@ -342,6 +342,13 @@ NAVIGATION STYLES
 
 /* end .menu */
 /*********************
+SIDEBAR
+*********************/
+#phone a {
+  font-size: .8em;
+}
+
+/*********************
 POSTS & CONTENT STYLES
 *********************/
 /* entry content */
@@ -641,8 +648,12 @@ SIDEBARS & ASIDES
 
 .fixed-tsml {
   position: fixed;
-  width: 22.9282%;
+  width: 22%;
   max-width: 258px;
+}
+
+.tsml-wrap {
+  position: relative;
 }
 
 .widgettitle {
@@ -652,7 +663,7 @@ SIDEBARS & ASIDES
 
 .widget {
   padding: 0 10px;
-  margin: 40px 0;
+  margin: 60px 0;
 }
 .widget ul li {
   margin-bottom: 0.75em;
