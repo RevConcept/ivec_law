@@ -102,46 +102,31 @@ jQuery(document).ready(function($) {
 		//we have a special sidebar that has three states: regular position, fixed at bottom, and sticky at bottom 
 		//make our sidebar with properties and functions
 		var ivec_sidebar = {
-			scrollbtm: $('.sidebar-scroll').offset().top,
-			sidebar: $('.sidebar-scroll'),
 			window_scroll: $(window).scrollTop(),
-			track_position: 'reg-position',
-			sidebar_height: $('#sidebar1').height() + $('.footer').height(),
+			track_position: 'scrolling',
 			main_height: $('#main').height(),
+			logo_wrap_height: $('#logo-wrapper').outerHeight(true),
+			tsml_top: $('#tsml-sidebar').offset().top - 40,
+			tsml_sidebar: $('#tsml-sidebar'),
+			sidebar_scroll_outer: $('.sidebar-scroll').outerHeight(true),
 			check_main_height: function() {
-				if(this.main_height < this.sidebar_height) {
-					$('#sidebar1').css('height', this.sidebar_height);
+				if(this.main_height < this.sidebar_scroll_outer) {
+					$('#sidebar1').css('height', this.sidebar_scroll_outer);
 				}
 			},
-			set_reg_position: function() {
-				if (this.track_position != 'reg-position') {
-		    		this.sidebar.removeClass('fixed-at-bottom sticky-at-bottom');
-		    		this.sidebar.css('top','');
-		    		this.sidebar.addClass('reg-position');
-		    		this.track_position = 'reg-position';
+			set_scrolling_tsml: function() {
+				if (this.track_position != 'scrolling') {
+		    		this.tsml_sidebar.removeClass('fixed-tsml');
+		    		this.tsml_sidebar.css({top:''});
+		    		this.track_position = 'scrolling';
 		    	}
 			},
-			set_fixed_bottom: function() {
-				if (this.track_position != 'fixed-at-bottom') {
-			    	this.sidebar.removeClass('sticky-at-bottom reg-position');
-			    	this.sidebar.css('top','');
-			    	this.sidebar.addClass('fixed-at-bottom');
-			    	this.track_position = 'fixed-at-bottom';
+			set_fixed_tsml: function() {
+				if (this.track_position != 'fixed') {
+			    	this.tsml_sidebar.css({top: this.logo_wrap_height - 40});
+			    	this.tsml_sidebar.addClass('fixed-tsml');
+			    	this.track_position = 'fixed';
 			    }
-			},
-			set_sticky_bottom: function(windowbtm) {
-				if (this.track_position != 'sticky-at-bottom') {
-		    		this.sidebar.removeClass('fixed-at-bottom reg-position');
-					this.sidebar.css({ top: windowbtm});
-		    		this.sidebar.addClass('sticky-at-bottom');
-		    		this.track_position = 'sticky-at-bottom';
-		    	}
-			},
-			isTopInView: function(elem) {
-			    docViewTop = $(window).scrollTop();
-			    docViewBottom = docViewTop + $(window).height();
-			    elemTop = $(elem).offset().top;
-			    return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
 			},
 			init: function(y) {
 				this.check_main_height();
@@ -150,16 +135,15 @@ jQuery(document).ready(function($) {
 				} else {
 					window_scroll = y;
 				}
-
-				if(window_scroll >= 0 && window_scroll < this.scrollbtm ) {
-					this.set_reg_position();
-			    } else if(window_scroll >= this.scrollbtm && !this.isTopInView($('.footer')) ) {
-			    	this.set_fixed_bottom();
-			    } else if( this.isTopInView($('.footer')) ) {
-			    	windowBtm = ($('#sidebar-bg').height() - $(window).height()) - 40;
-			    	this.set_sticky_bottom(windowBtm);
+				tsml_location = this.tsml_top - window_scroll;
+				if(window_scroll == 0) {
+					this.set_scrolling_tsml();
+				} else if(window_scroll >= 0 && tsml_location < this.logo_wrap_height) {
+					this.set_fixed_tsml();
+				} else if(tsml_location >= this.logo_wrap_height ) {
+					this.set_scrolling_tsml();
 			    } else {
-			    	this.set_reg_position();
+			    	this.set_scrolling_tsml();
 			    }
 			}
 		}
@@ -207,11 +191,6 @@ jQuery(document).ready(function($) {
 			  return false;
 			});
 		}
-
-		//nivo slider 
-		$(window).load(function() {
-	        $('#slider').nivoSlider();
-	    });
  
 }); /* end of as page load scripts */
 

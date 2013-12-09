@@ -1241,14 +1241,20 @@ SIDEBARS & ASIDES
 	}
 
 	#tsml-sidebar {
-		position: relative;
-		
+		.widget {
+			position: relative;
+		}
+
+		.q-left, .q-right {
+			top: -.5em;
+		}
 		h3 {
 			color: $red;
 			margin-bottom: none;
 		}
 		p {
 			@include text-shadow( .5px, 1px, 0, #dfd7c4 );
+			position: relative;
 		}
 	}
 

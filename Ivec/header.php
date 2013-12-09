@@ -58,22 +58,6 @@
 						<a class="menu-logo" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Ivec Law" /></a>
 					</div>
 
-					<div id="logo-wrapper" class="threecol first clearfix">
-						<div class="logo">
-							<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Ivec Law PC"/>
-						</div>
-			
-						<?php if( $il_phone ) : ?>
-							<div id="phone" class="widget" class="fixed">
-								<div class="wrap">
-									<a href="tel:<?php echo $il_phone ?>,callto:<?php echo $il_phone; ?>"> <span class="title">Call</span><?php echo $il_phone; ?></a>
-								</div>
-							</div>
-						<?php endif; ?>
-						
-					</div>
-					
-					
 					<div id="nav-wrap" class="ninecol last">
 						<nav role="navigation">					
 								<?php bones_main_nav(); ?>
