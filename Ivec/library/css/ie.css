@@ -37,15 +37,12 @@ remember less is more.
 CLEARFIXIN'
 *********************/
 .clearfix {
-  zoom: 1;
-}
-.clearfix:before, .clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
+  zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    content: "";
+    display: table; }
+  .clearfix:after {
+    clear: both; }
 
 /*********************
 TOOLS
@@ -53,14 +50,12 @@ TOOLS
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .image-replacement {
   text-indent: 100%;
   white-space: nowrap;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 /*********************
 COLORS
@@ -87,8 +82,7 @@ TYPOGRAPHY
   src: url("../fonts/BebasNeue.eot");
   src: url("../fonts/BebasNeue.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue.woff") format("woff"), url("../fonts/BebasNeue.TTF") format("truetype"), url("../fonts/BebasNeue.svg#BebasNeue") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
 /*
 use the best ampersand
@@ -96,46 +90,37 @@ http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
 span.amp {
   font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic;
-}
+  font-style: italic; }
 
 .text-left {
-  text-align: left;
-}
+  text-align: left; }
 
 .text-center {
-  text-align: center;
-}
+  text-align: center; }
 
 .text-right {
-  text-align: right;
-}
+  text-align: right; }
 
 .alert-help, .alert-info, .alert-error, .alert-success {
   margin: 10px;
   padding: 5px 18px;
-  border: 1px solid;
-}
+  border: 1px solid; }
 
 .alert-help {
   border-color: #e8dc59;
-  background: #ebe16f;
-}
+  background: #ebe16f; }
 
 .alert-info {
   border-color: #bfe4f4;
-  background: #d5edf8;
-}
+  background: #d5edf8; }
 
 .alert-error {
   border-color: #f8cdce;
-  background: #fbe3e4;
-}
+  background: #fbe3e4; }
 
 .alert-success {
   border-color: #deeaae;
-  background: #e6efc2;
-}
+  background: #e6efc2; }
 
 /*********************
 TRANSITION
@@ -169,11 +154,9 @@ BUTTONS
   border: 0;
   font-size: 1.5em;
   line-height: 1.5em;
-  padding: .2em .9em;
-}
-.button:hover, .button:focus, .button:visited:hover, .button:visited:focus, #slider span:hover, #slider span:focus {
-  color: #beb8a6;
-}
+  padding: .2em .9em; }
+  .button:hover, .button:focus, .button:visited:hover, .button:visited:focus, #slider span:hover, #slider span:focus {
+    color: #beb8a6; }
 
 .blue-button, .blue-button:visited {
   border-color: #1472ad;
@@ -184,25 +167,22 @@ BUTTONS
   background-image: -moz-linear-gradient(top, #1990db, #1681c4);
   background-image: -o-linear-gradient(top, #1990db, #1681c4);
   background-image: linear-gradient(to bottom, #1990db, #1681c4);
-  box-shadow: inset 0 0 3px #59b3ec;
-}
-.blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
-  border-color: #116396;
-  background-color: #1472ad;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));
-  background-image: -webkit-linear-gradient(top, #1784c9, #1472ad);
-  background-image: -moz-linear-gradient(top, #1784c9, #1472ad);
-  background-image: -o-linear-gradient(top, #1784c9, #1472ad);
-  background-image: linear-gradient(to bottom, #1784c9, #1472ad);
-}
-.blue-button:active, .blue-button:visited:active {
-  background-color: #1990db;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
-  background-image: -webkit-linear-gradient(top, #1681c4, #1990db);
-  background-image: -moz-linear-gradient(top, #1681c4, #1990db);
-  background-image: -o-linear-gradient(top, #1681c4, #1990db);
-  background-image: linear-gradient(to bottom, #1681c4, #1990db);
-}
+  box-shadow: inset 0 0 3px #59b3ec; }
+  .blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
+    border-color: #116396;
+    background-color: #1472ad;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));
+    background-image: -webkit-linear-gradient(top, #1784c9, #1472ad);
+    background-image: -moz-linear-gradient(top, #1784c9, #1472ad);
+    background-image: -o-linear-gradient(top, #1784c9, #1472ad);
+    background-image: linear-gradient(to bottom, #1784c9, #1472ad); }
+  .blue-button:active, .blue-button:visited:active {
+    background-color: #1990db;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
+    background-image: -webkit-linear-gradient(top, #1681c4, #1990db);
+    background-image: -moz-linear-gradient(top, #1681c4, #1990db);
+    background-image: -o-linear-gradient(top, #1681c4, #1990db);
+    background-image: linear-gradient(to bottom, #1681c4, #1990db); }
 
 /******************************************************************
 Site Name:
@@ -227,78 +207,63 @@ values are commented out on each line.
 
 ******************************************************************/
 .onecol {
-  width: 5.801104972%;
-}
+  width: 5.801104972%; }
 
 /* 4.85%;  } /* grid_1  */
 .twocol {
-  width: 14.364640883%;
-}
+  width: 14.364640883%; }
 
 /* 13.45%; } /* grid_2  */
 .threecol {
-  width: 22.928176794%;
-}
+  width: 22.928176794%; }
 
 /* 22.05%; } /* grid_3  */
 .fourcol {
-  width: 31.491712705%;
-}
+  width: 31.491712705%; }
 
 /* 30.75%; } /* grid_4  */
 .fivecol {
-  width: 40.055248616%;
-}
+  width: 40.055248616%; }
 
 /* 39.45%; } /* grid_5  */
 .sixcol {
-  width: 48.618784527%;
-}
+  width: 48.618784527%; }
 
 /* 48%;    } /* grid_6  */
 .sevencol {
-  width: 57.182320438000005%;
-}
+  width: 57.182320438000005%; }
 
 /* 56.75%; } /* grid_7  */
 .eightcol {
-  width: 65.74585634900001%;
-}
+  width: 65.74585634900001%; }
 
 /* 65.4%;  } /* grid_8  */
 .ninecol {
-  width: 74.30939226%;
-}
+  width: 74.30939226%; }
 
 /* 74.05%; } /* grid_9  */
 .tencol {
-  width: 82.87292817100001%;
-}
+  width: 82.87292817100001%; }
 
 /* 82.7%;  } /* grid_10 */
 .elevencol {
-  width: 91.436464082%;
-}
+  width: 91.436464082%; }
 
 /* 91.35%; } /* grid_11 */
 .twelvecol {
-  width: 99.999999993%;
-}
+  width: 99.999999993%; }
 
 /* 100%;   } /* grid_12 */
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
   position: relative;
   float: left;
-  margin-left: 2.762430939%;
-}
+  margin-left: 2.762430939%; }
 
 .first {
-  margin-left: 0;
-}
+  margin-left: 0; }
 
 .last {
-  float: right;
-}
+  float: right; }
 
 /******************************************************************
 Site Name: 
@@ -321,56 +286,47 @@ NAVIGATION STYLES
 *********************/
 /* .menu is clearfixed inside mixins.scss */
 .menu {
-  /* end .menu ul */
-}
-.menu ul {
-  /* end .menu ul li */
-  /* highlight current page */
-  /* end current highlighters */
-}
-.menu ul li {
-  /*
-  plan your menus and drop-downs wisely.
-  */
-}
-.menu ul li a {
-  /*
-  you can use hover styles here even though this size
-  has the possibility of being a mobile device.
-  */
-}
+  /* end .menu ul */ }
+  .menu ul {
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */ }
+    .menu ul li {
+      /*
+      plan your menus and drop-downs wisely.
+      */ }
+      .menu ul li a {
+        /*
+        you can use hover styles here even though this size
+        has the possibility of being a mobile device.
+        */ }
 
 /* end .menu */
 /*********************
 SIDEBAR
 *********************/
 #phone a {
-  font-size: .8em;
-}
+  font-size: .8em; }
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 /* entry content */
 .entry-content {
-  /* at this larger size, we can start to align images */
-}
-.entry-content .alignleft, .entry-content img.alignleft {
-  margin-right: 1.5em;
-  display: inline;
-  float: left;
-}
-.entry-content .alignright, .entry-content img.alignright {
-  margin-left: 1.5em;
-  display: inline;
-  float: right;
-}
-.entry-content .aligncenter, .entry-content img.aligncenter {
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  clear: both;
-}
+  /* at this larger size, we can start to align images */ }
+  .entry-content .alignleft, .entry-content img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left; }
+  .entry-content .alignright, .entry-content img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right; }
+  .entry-content .aligncenter, .entry-content img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both; }
 
 /* end .entry-content */
 /*********************
@@ -401,27 +357,22 @@ GENERAL STYLES
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  max-width: 1280px;
-}
+  max-width: 1280px; }
 
 .two-lines.mobile {
-  display: none;
-}
+  display: none; }
 
 #content {
   position: relative;
   padding-top: 0px;
-  margin-top: 70px;
-}
-#content .two-lines {
-  display: block;
-  top: 4px;
-  z-index: 100;
-}
+  margin-top: 70px; }
+  #content .two-lines {
+    display: block;
+    top: 4px;
+    z-index: 100; }
 
 #main.eightcol {
-  width: 73%;
-}
+  width: 73%; }
 
 /*********************
 HEADER STYLES
@@ -431,40 +382,31 @@ HEADER STYLES
   top: 0;
   width: 100%;
   z-index: 800;
-  background: none;
-}
-.header #header-bg {
-  height: 100px;
-  width: 100%;
-  position: absolute;
-}
-.header .nav {
-  background: none;
-  margin: 1.2em auto;
-  padding-bottom: 0;
-  width: 100%;
-}
-.header .nav li {
-  padding: 0 4% 0 0;
-}
-.header .nav li a {
-  padding: 0;
-}
-.header .nav li:first-child {
-  padding-left: 0;
-}
+  background: none; }
+  .header #header-bg {
+    height: 100px;
+    width: 100%;
+    position: absolute; }
+  .header .nav {
+    background: none;
+    margin: 1.2em auto;
+    padding-bottom: 0;
+    width: 100%; }
+    .header .nav li {
+      padding: 0 4% 0 0; }
+      .header .nav li a {
+        padding: 0; }
+    .header .nav li:first-child {
+      padding-left: 0; }
 
 #mobile-menu {
-  display: none;
-}
+  display: none; }
 
 .menu-logo {
   display: block;
-  max-width: 258px;
-}
-.menu-logo img {
-  width: 100%;
-}
+  max-width: 258px; }
+  .menu-logo img {
+    width: 100%; }
 
 #phone {
   text-align: center;
@@ -474,31 +416,26 @@ HEADER STYLES
   margin: .5em auto;
   padding: .8em .5em .5em;
   background: #181818 url(../images/bg-black.png) repeat;
-  width: 90%;
-}
-#phone .wrap {
-  padding-bottom: 5px;
-  border-top: 1px solid #beb8a7;
-  border-bottom: 1px solid #beb8a7;
-}
-#phone a {
-  text-decoration: none;
-  color: #e9e6de;
-  text-align: center;
-}
-#phone a:hover, #phone a:focus {
-  color: #beb8a6;
-}
-#phone span {
-  display: block;
-  width: 45px;
-  margin: -7px auto 0px;
-  font-size: 0.75em;
-  line-height: 0.75em;
-  font-weight: normal;
-  color: #beb8a7;
-  background: #181818 url(../images/bg-black.png) repeat;
-}
+  width: 90%; }
+  #phone .wrap {
+    padding-bottom: 5px;
+    border-top: 1px solid #beb8a7;
+    border-bottom: 1px solid #beb8a7; }
+  #phone a {
+    text-decoration: none;
+    color: #e9e6de;
+    text-align: center; }
+    #phone a:hover, #phone a:focus {
+      color: #beb8a6; }
+  #phone span {
+    display: block;
+    width: 45px;
+    margin: -7px auto 0px;
+    font-size: 0.75em;
+    line-height: 0.75em;
+    font-weight: normal;
+    color: #beb8a7;
+    background: #181818 url(../images/bg-black.png) repeat; }
 
 /*********************
 NAVIGATION STYLES
@@ -506,57 +443,49 @@ NAVIGATION STYLES
 .nav {
   /* end .menu ul li */
   /* highlight current page */
-  /* end current highlighters */
-}
-.nav li {
-  display: inline-block;
-  position: relative;
-  /*
-  plan your menus and drop-downs wisely.
-  */
-  /* showing sub-menus */
-}
-.nav li a {
-  border-bottom: 0;
-  /*
-  you can use hover styles here even though this size
-  has the possibility of being a mobile device.
-  */
-}
-.nav li ul.sub-menu,
-.nav li ul.children {
-  margin-top: 0;
-  border: 1px solid #ccc;
-  border-top: 0;
-  position: absolute;
-  display: none;
-  z-index: 8999;
-  /* highlight sub-menu current page */
-}
-.nav li ul.sub-menu li,
-.nav li ul.children li {
-  /*
-  if you need to go deeper, go nuts
-  just remember deeper menus suck
-  for usability. k, bai.
-  */
-}
-.nav li ul.sub-menu li a,
-.nav li ul.children li a {
-  padding-left: 10px;
-  border-right: 0;
-  display: block;
-  width: 180px;
-  border-bottom: 1px solid #ccc;
-}
-.nav li ul.sub-menu li:last-child a,
-.nav li ul.children li:last-child a {
-  border-bottom: 0;
-}
-.nav li:hover ul {
-  top: auto;
-  display: block;
-}
+  /* end current highlighters */ }
+  .nav li {
+    display: inline-block;
+    position: relative;
+    /*
+    plan your menus and drop-downs wisely.
+    */
+    /* showing sub-menus */ }
+    .nav li a {
+      border-bottom: 0;
+      /*
+      you can use hover styles here even though this size
+      has the possibility of being a mobile device.
+      */ }
+    .nav li ul.sub-menu,
+    .nav li ul.children {
+      margin-top: 0;
+      border: 1px solid #ccc;
+      border-top: 0;
+      position: absolute;
+      display: none;
+      z-index: 8999;
+      /* highlight sub-menu current page */ }
+      .nav li ul.sub-menu li,
+      .nav li ul.children li {
+        /*
+        if you need to go deeper, go nuts
+        just remember deeper menus suck
+        for usability. k, bai.
+        */ }
+        .nav li ul.sub-menu li a,
+        .nav li ul.children li a {
+          padding-left: 10px;
+          border-right: 0;
+          display: block;
+          width: 180px;
+          border-bottom: 1px solid #ccc; }
+        .nav li ul.sub-menu li:last-child a,
+        .nav li ul.children li:last-child a {
+          border-bottom: 0; }
+    .nav li:hover ul {
+      top: auto;
+      display: block; }
 
 /* end .nav */
 /*********************
@@ -564,38 +493,31 @@ CONTENT AND PAGE STYLES
 *********************/
 .entry-content h2 {
   margin-top: 0;
-  line-height: 2.125em;
-}
+  line-height: 2.125em; }
 
 .testimonials-page .tsml {
   width: 27.5%;
   padding: 2%;
-  margin: 1% 1% 1em;
-}
+  margin: 1% 1% 1em; }
 .testimonials-page .isotope-item {
-  z-index: 2;
-}
+  z-index: 2; }
 .testimonials-page .isotope-hidden.isotope-item {
   pointer-events: none;
-  z-index: 1;
-}
+  z-index: 1; }
 .testimonials-page .isotope,
 .testimonials-page .isotope .isotope-item {
   /* change duration value to whatever you like */
   -webkit-transition-duration: 0.8s;
   -moz-transition-duration: 0.8s;
-  transition-duration: 0.8s;
-}
+  transition-duration: 0.8s; }
 .testimonials-page .isotope {
   -webkit-transition-property: height, width;
   -moz-transition-property: height, width;
-  transition-property: height, width;
-}
+  transition-property: height, width; }
 .testimonials-page .isotope .isotope-item {
   -webkit-transition-property: -webkit-transform, opacity;
   -moz-transition-property: -moz-transform, opacity;
-  transition-property: transform, opacity;
-}
+  transition-property: transform, opacity; }
 
 /*********************
 SIDEBARS & ASIDES
@@ -607,8 +529,7 @@ SIDEBARS & ASIDES
   width: 22.9282%;
   top: 0;
   bottom: 0;
-  z-index: 200;
-}
+  z-index: 200; }
 
 #sidebar1 {
   display: block;
@@ -616,8 +537,7 @@ SIDEBARS & ASIDES
   z-index: 200;
   position: relative;
   top: -102px;
-  z-index: 900;
-}
+  z-index: 900; }
 
 #logo-wrapper {
   display: block;
@@ -627,52 +547,45 @@ SIDEBARS & ASIDES
   width: 22.9282%;
   z-index: 100;
   position: fixed;
-  top: 0;
-}
-#logo-wrapper .logo {
-  max-width: 258px;
-  width: 100%;
-}
-#logo-wrapper .logo img {
-  width: 105%;
-  margin-left: -5px;
-}
+  top: 0; }
+  #logo-wrapper .logo {
+    max-width: 258px;
+    width: 100%; }
+    #logo-wrapper .logo img {
+      width: 105%;
+      margin-left: -5px; }
 
 #contact {
-  margin-top: 125%;
-}
+  margin-top: 100%; }
+  #contact .wpcf7-submit {
+    margin-left: 20px; }
 
 .sidebar-scroll {
-  position: absolute;
-}
+  position: absolute; }
+  .sidebar-scroll .badges {
+    margin-top: 20px; }
 
 .fixed-tsml {
   position: fixed;
   width: 22%;
-  max-width: 258px;
-}
+  max-width: 258px; }
 
 .tsml-wrap {
-  position: relative;
-}
+  position: relative; }
 
 .widgettitle {
   border-bottom: 2px solid #444;
-  margin-bottom: 0.75em;
-}
+  margin-bottom: 0.75em; }
 
 .widget {
   padding: 0 10px;
-  margin: 60px 0;
-}
-.widget ul li {
-  margin-bottom: 0.75em;
-  /* deep nesting */
-}
-.widget ul li ul {
-  margin-top: 0.75em;
-  padding-left: 1em;
-}
+  margin: 60px 0; }
+  .widget ul li {
+    margin-bottom: 0.75em;
+    /* deep nesting */ }
+    .widget ul li ul {
+      margin-top: 0.75em;
+      padding-left: 1em; }
 
 /* links widget */
 /* meta widget */
@@ -693,13 +606,35 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
+.footer {
+  position: relative;
+  z-index: 1000; }
+  .footer .threecol {
+    display: block;
+    padding-left: 20px;
+    background: url(../images/bg-footer-nav.jpg) repeat-y; }
+    .footer .threecol li {
+      display: inline; }
+      .footer .threecol li a {
+        padding: 0px;
+        font-family: "Georgia", Cambria, Times New Roman, Times, serif;
+        text-transform: none;
+        font-size: 18px; }
+  .footer .address {
+    margin-top: 20px; }
+  .footer .associations {
+    float: right;
+    margin-top: 50px; }
+    .footer .associations img {
+      float: right;
+      max-width: 250px; }
+
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
   it's very rare to have multi-depth menus in
   the footer.
-  */
-}
+  */ }
 
 /* end .footer-links */
 /******************************************************************

@@ -14,6 +14,26 @@
 
 					<div class="ninecol last clearfix" >
 
+						<?php if(get_field('footer_images', 'options')): ?>
+ 
+							<ul class="associations">
+						 
+							<?php while(has_sub_field('footer_images', 'options')):
+
+								$attachment_id = get_sub_field('footer_image', 'options');
+								$size = "full"; // (thumbnail, medium, large, full or custom size)
+								$image = wp_get_attachment_image_src( $attachment_id, $size );
+
+							?>
+						 
+								<li><img src="<?php echo $image[0]; ?>" alt="Association" /></li>
+						 
+							<?php endwhile; ?>
+						 
+							</ul>
+						 
+						<?php endif; ?>
+
 						<div class="address clearfix">
 
 							<div class="street-num">
@@ -29,7 +49,7 @@
 
 						<p class="source-org copyright">Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>. Site by <a href="http://revelationconcept.com" target="_blank">Revelation Concept</a>.</p>
 
-					</div>
+					</div><!--end ninecol-->
 
 				</div><!--end wrap-->
 

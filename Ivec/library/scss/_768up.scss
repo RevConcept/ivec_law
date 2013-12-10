@@ -312,10 +312,19 @@ SIDEBARS & ASIDES
 	}
 }
 #contact {
-	margin-top: 125%;
+	margin-top: 100%;
+
+	.wpcf7-submit {
+		margin-left: 20px;
+	}
 }
+
 .sidebar-scroll {
 	position: absolute;
+
+	.badges {
+		margin-top: 20px;
+	}
 }
 
 .fixed-tsml {
@@ -453,6 +462,39 @@ of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
 .footer {
+	position: relative;
+	z-index: 1000;
+
+	.threecol {
+		display: block;
+		padding-left: 20px;
+		background: url(../images/bg-footer-nav.jpg) repeat-y;
+
+		li {
+			display: inline;
+
+			a {
+				padding: 0px;
+				font-family: $serif;
+				text-transform: none;
+				font-size: 18px;
+			}
+		}
+	}
+
+	.address {
+		margin-top: 20px;
+	}
+
+	.associations {
+		float: right;
+		margin-top: 50px;
+
+		img {
+			float:right;
+			max-width: 250px;
+		}
+	}
 
 }
 
