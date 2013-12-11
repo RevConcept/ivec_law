@@ -1463,7 +1463,7 @@ SIDEBARS & ASIDES
       text-decoration: none;
       font-family: calisti, "Georgia", Cambria, Times New Roman, Times, serif;
       text-align: left; }
-  #contact input[type=text], #contact input[type=email], #contact textarea, .wpcf7 form input[type=text], .wpcf7 form input[type=email], .wpcf7 form textarea {
+  #contact input[type=text], #contact input[type=email], #contact input[type=tel], #contact textarea, .wpcf7 form input[type=text], .wpcf7 form input[type=email], .wpcf7 form input[type=tel], .wpcf7 form textarea {
     background: url(../images/bg.jpg) repeat;
     width: 100%;
     font-size: 1.125em;
@@ -1557,7 +1557,7 @@ FOOTER STYLES
     color: white; }
     .footer a:hover {
       color: #beb8a6; }
-  .footer .threecol {
+  .footer .threecol.nav {
     display: none; }
   .footer .street-num {
     float: left;
@@ -1571,9 +1571,14 @@ FOOTER STYLES
     .footer .street-name span {
       text-transform: none;
       font-family: "Calisto MT W01 Italic", "Georgia", Cambria, Times New Roman, Times, serif; }
+  .footer .social {
+    margin: 70px 0px 0px; }
+    .footer .social:hover {
+      opacity: .8; }
 
 /* end .footer-links */
 .copyright {
+  margin-top: 0px;
   font-family: "Calisto MT W01 Italic", "Georgia", Cambria, Times New Roman, Times, serif; }
 
 /*
@@ -2015,13 +2020,13 @@ you can add resource intensive styles.
   .footer {
     position: relative;
     z-index: 1000; }
-    .footer .threecol {
+    .footer .threecol.nav {
       display: block;
       padding-left: 20px;
       background: url(../images/bg-footer-nav.jpg) repeat-y; }
-      .footer .threecol li {
+      .footer .threecol.nav li {
         display: inline; }
-        .footer .threecol li a {
+        .footer .threecol.nav li a {
           padding: 0px;
           font-family: "Georgia", Cambria, Times New Roman, Times, serif;
           text-transform: none;
@@ -2033,7 +2038,9 @@ you can add resource intensive styles.
       margin-top: 50px; }
       .footer .associations img {
         float: right;
-        max-width: 250px; }
+        max-width: 250px;
+        max-width: 100%;
+        margin-bottom: 20px; }
 
   .footer-links ul li {
     /*

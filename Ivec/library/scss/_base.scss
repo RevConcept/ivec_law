@@ -1208,7 +1208,7 @@ SIDEBARS & ASIDES
 				text-align: left;
 			}
 		}
-		input[type=text], input[type=email], textarea {
+		input[type=text], input[type=email], input[type=tel], textarea {
 			background: url(../images/bg.jpg) repeat;
 			width: 100%;
 			font-size: em(18);
@@ -1336,7 +1336,7 @@ FOOTER STYLES
 		}
 	}
 
-	.threecol {
+	.threecol.nav {
 		display: none;
 	}
 
@@ -1357,6 +1357,14 @@ FOOTER STYLES
 			font-family: $content-italic;
 		}
 	}
+
+	.social {
+		margin: 70px 0px 0px;
+
+		&:hover {
+			opacity: .8;
+		}
+	}
 }
 
 	.footer-links {
@@ -1373,6 +1381,7 @@ FOOTER STYLES
 
 
 	.copyright {
+		margin-top: 0px;
 		font-family: $content-italic;
 	}
 

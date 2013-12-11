@@ -609,13 +609,13 @@ mobile. Make sure to double check these!
 .footer {
   position: relative;
   z-index: 1000; }
-  .footer .threecol {
+  .footer .threecol.nav {
     display: block;
     padding-left: 20px;
     background: url(../images/bg-footer-nav.jpg) repeat-y; }
-    .footer .threecol li {
+    .footer .threecol.nav li {
       display: inline; }
-      .footer .threecol li a {
+      .footer .threecol.nav li a {
         padding: 0px;
         font-family: "Georgia", Cambria, Times New Roman, Times, serif;
         text-transform: none;
@@ -627,7 +627,9 @@ mobile. Make sure to double check these!
     margin-top: 50px; }
     .footer .associations img {
       float: right;
-      max-width: 250px; }
+      max-width: 250px;
+      max-width: 100%;
+      margin-bottom: 20px; }
 
 .footer-links ul li {
   /*

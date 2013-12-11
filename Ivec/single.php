@@ -50,12 +50,16 @@
 
 						<?php endif; ?>
 
-					</div>
+						<?php if( get_field('case_evaluation') == 'yes' ) : ?>
 
-					
+							<?php get_template_part( 'part', 'evaluation' ); ?>
 
-				</div>
+						<?php endif; ?>
 
-			</div>
+					</div><!--end main-->
+
+				</div><!--end inner-content-->
+
+			</div><!--end content-->
 
 <?php get_footer(); ?>

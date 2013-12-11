@@ -27,7 +27,7 @@
 										</header>
 
 										<section class="section entry-content" id="tsml-header">
-											<p>You can filter testimonials by type by clicking the options below.</p>
+											<?php the_field('test_content'); ?>
 											<div class="tsml-filters" id="btn-wrap">
 												<a class="current btn" data-filter="*">All</a>
 												<a class="btn" data-filter=".client">Clients</a>

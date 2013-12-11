@@ -10,8 +10,12 @@
 					<div id="sidebar1" class="sidebar threecol first clearfix" role="complementary">
 						<div id="logo-wrapper">
 							<div class="logo">
-								<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Ivec Law PC"/>
+								<a href="<?php bloginfo('url'); ?>">
+									<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Ivec Law PC"/>
+								</a>
 							</div>
+
+							<?php echo do_shortcode('[google-translator]'); ?>
 				
 							<?php if( $il_phone ) : ?>
 								<div id="phone" class="widget" class="fixed">

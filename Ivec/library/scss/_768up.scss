@@ -465,7 +465,7 @@ mobile. Make sure to double check these!
 	position: relative;
 	z-index: 1000;
 
-	.threecol {
+	.threecol.nav {
 		display: block;
 		padding-left: 20px;
 		background: url(../images/bg-footer-nav.jpg) repeat-y;
@@ -493,6 +493,8 @@ mobile. Make sure to double check these!
 		img {
 			float:right;
 			max-width: 250px;
+			max-width: 100%;
+			margin-bottom: 20px;
 		}
 	}
 
