@@ -40,13 +40,25 @@ style a page via class
 	.search-no-results {}           /* no results search page */
 	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
 .error404 {}                      /* 404 page */
-.single {
-	h1 {
-		margin: .8em 0px 0px;
+.practice-areas {
+	.pa-list {
+		ul {
+			padding-top: 20px;
+			border-top: 3px solid #beb8a6;
+		}
 	}
-	.byline {
-		margin: 0px;
+}
+.single {
+	header {
 		text-align: center;
+
+		h1 {
+			margin: .8em 0px 0px;
+		}
+		.byline {
+			margin: 0px 0px 20px;
+			text-align: center;
+		}
 	}
 
 	section {
@@ -268,6 +280,14 @@ SLIDER STYLES
 		font-size: 45px;
 		font-family: $content-italic;
 	}
+
+	.ls-fullwidthdark .ls-nav-next {
+		right: -15px;
+	}
+
+	.ls-fullwidthdark .ls-nav-prev {
+		left: -15px;
+	}
 }
 
 /*********************
@@ -426,7 +446,15 @@ HOME STYLES
 	}
 	.box {
 		margin-bottom: 1em;
+		border-bottom: 3px solid #beb8a6;
+		padding-bottom: 50px;
 	}
+
+	.box.last {
+		border-bottom: 0px;
+		padding-bottom: 0px;
+	}
+
 	.img-wrap {
 		max-width: 210px;
 		margin: 0 auto;
@@ -438,9 +466,11 @@ HOME STYLES
 #practice-areas {
 	font-size: em(20);
 	line-height: em(20);
+
 	.img-wrap {
 		max-width: 224px;
-		
+		margin: 0px auto;
+
 		img {
 			width: 100%;
 		}
@@ -449,7 +479,6 @@ HOME STYLES
 		font-size: em(16);
 
 		ul li  {
-			
 			padding-left: 1em;
 		}
 	}
@@ -513,6 +542,10 @@ HOME STYLES
 			.post {
 				padding-bottom: 30px;
 
+				&:first-child {
+					margin-top: 0px;
+				}
+
 				h1 {
 					margin-bottom: 0px;
 				}
@@ -522,10 +555,35 @@ HOME STYLES
 					border-bottom: 3px solid $tan;
 				}
 			}
+
+			.pa-list {
+				margin-top: 0px;
+
+				h3 {
+					margin: 0px 0px 20px;
+					padding-bottom: 15px;
+					font-size: 30px;
+					text-align: center;
+					border-bottom: 3px solid #beb8a6;
+				}
+			}
+
+			img {
+				display: none;
+			}
+
+			.tags a {
+				font-family: $serif;
+			}
+
+			.recent a {
+				font-family: $serif;
+				font-size: 14px;
+			}
 		}
 
 		.post {
-			margin-top: 2.2em;
+			margin: 2em 0px;
 			padding: 0px 20px;
 			background: url(../images/list-bg.jpg) repeat;
 			}            /* general post style */
@@ -698,7 +756,7 @@ HOME STYLES
 			.wpcf7 form {
 				float: left;
 
-				input[type=text], [type=email], textarea {
+				input[type=text], input[type=email], input[type=tel], textarea {
 					border: 2px solid $tan;
 				}
 			}
@@ -760,7 +818,7 @@ HOME STYLES
 	z-index: 2; /* needed because of custom ol style */
 
 	ul {
-		
+
 		li {
 			background: url(../images/list-style.png) no-repeat left 9px;
 			padding-left: em(20);
@@ -1195,13 +1253,25 @@ SIDEBARS & ASIDES
 }
 	
 	#contact, .wpcf7 form {
-		
 		font-size: em(14);
 		color: $black;
+
+		.cta {
+
+			h3, p {
+				padding-bottom: 20px;
+				margin-bottom: 15px;
+				background: url(../images/bg-divide.png) repeat-x bottom left;
+			}
+
+		}
 		
 		form {
 			margin: 1.625em auto;
+			padding-bottom: 20px;
 			width: 96%;
+			background: url(../images/bg-divide.png) repeat-x bottom left;
+
 			a {
 				text-decoration: none;
 				font-family: calisti, $serif;

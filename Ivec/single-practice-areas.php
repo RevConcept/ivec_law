@@ -45,7 +45,9 @@
 												<?php endforeach; ?>
 												</ul>
 											<?php endif; ?>
-									</div>
+									
+									</div><!--end pa-list-->
+
 									<h2><?php the_title(); ?></h2>
 
 									<?php if( $pa_callout ) : ?>

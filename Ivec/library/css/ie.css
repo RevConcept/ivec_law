@@ -489,6 +489,16 @@ NAVIGATION STYLES
 
 /* end .nav */
 /*********************
+HOME STYLES
+*********************/
+#boxes .box {
+  border-bottom: 0px;
+  padding-bottom: 0px; }
+
+#practice-areas .img-wrap {
+  margin: 0px; }
+
+/*********************
 CONTENT AND PAGE STYLES
 *********************/
 .entry-content h2 {
@@ -518,6 +528,13 @@ CONTENT AND PAGE STYLES
   -webkit-transition-property: -webkit-transform, opacity;
   -moz-transition-property: -moz-transform, opacity;
   transition-property: transform, opacity; }
+
+.index img {
+  display: block;
+  max-width: 100%;
+  padding: .7em;
+  margin-bottom: 15px;
+  background: url(../images/list-bg.jpg) repeat; }
 
 /*********************
 SIDEBARS & ASIDES

@@ -106,12 +106,14 @@ jQuery(document).ready(function($) {
 			track_position: 'scrolling',
 			main_height: $('#main').height(),
 			logo_wrap_height: $('#logo-wrapper').outerHeight(true),
-			tsml_top: $('#tsml-sidebar').offset().top - 40,
+			tsml_top: $('#tsml-sidebar').position().top,
 			tsml_sidebar: $('#tsml-sidebar'),
-			sidebar_scroll_outer: $('.sidebar-scroll').outerHeight(true),
+			sidebar_scroll_outer: $('.sidebar-scroll').height(),
+			tsml_height: $('#tsml-sidebar').height(),
 			check_main_height: function() {
 				if(this.main_height < this.sidebar_scroll_outer) {
-					$('#sidebar1').css('height', this.sidebar_scroll_outer);
+
+					$('#sidebar1').css('height', this.sidebar_scroll_outer / 1.70);
 				}
 			},
 			set_scrolling_tsml: function() {
@@ -136,11 +138,9 @@ jQuery(document).ready(function($) {
 					window_scroll = y;
 				}
 
-				tsml_location = this.tsml_top - window_scroll;
-
-				if(tsml_location > this.logo_wrap_height) {
+				if(window_scroll >= 0 && this.tsml_top > window_scroll) {
 					this.set_scrolling_tsml();
-				} else if(tsml_location <= this.logo_wrap_height) {
+				} else if(this.tsml_top <= window_scroll && window_scroll != 0) {
 					this.set_fixed_tsml();
 			    } else {
 			    	this.set_scrolling_tsml();
@@ -150,11 +150,14 @@ jQuery(document).ready(function($) {
 
 		window.ivec_sidebar = ivec_sidebar;
 		ivec_sidebar.init();
+
+		console.log($('.footer').offset().top + " " + ivec_sidebar.tsml_top + $('#tsml-sidebar').height());
 		
 		
 		$(window).scroll(function (event) {
 		    
 		    var y = $(this).scrollTop();
+		    //console.log(ivec_sidebar.tsml_top - y);
 		    ivec_sidebar.init(y);
 		   
 	 	});

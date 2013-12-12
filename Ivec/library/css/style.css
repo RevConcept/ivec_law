@@ -678,11 +678,17 @@ style a page via class
 /* no results search page */
 /* individual paged search (i.e. body.search-paged-3) */
 /* 404 page */
-.single h1 {
-  margin: .8em 0px 0px; }
-.single .byline {
-  margin: 0px;
+.practice-areas .pa-list ul {
+  padding-top: 20px;
+  border-top: 3px solid #beb8a6; }
+
+.single header {
   text-align: center; }
+  .single header h1 {
+    margin: .8em 0px 0px; }
+  .single header .byline {
+    margin: 0px 0px 20px;
+    text-align: center; }
 .single section {
   padding: 1em .5em; }
 .single .post {
@@ -857,6 +863,10 @@ SLIDER STYLES
   #slider p {
     font-size: 45px;
     font-family: "Calisto MT W01 Italic", "Georgia", Cambria, Times New Roman, Times, serif; }
+  #slider .ls-fullwidthdark .ls-nav-next {
+    right: -15px; }
+  #slider .ls-fullwidthdark .ls-nav-prev {
+    left: -15px; }
 
 /*********************
 NAVIGATION STYLES
@@ -957,7 +967,12 @@ HOME STYLES
     line-height: 1em;
     display: inline-block; }
   #boxes .box {
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    border-bottom: 3px solid #beb8a6;
+    padding-bottom: 50px; }
+  #boxes .box.last {
+    border-bottom: 0px;
+    padding-bottom: 0px; }
   #boxes .img-wrap {
     max-width: 210px;
     margin: 0 auto; }
@@ -968,7 +983,8 @@ HOME STYLES
   font-size: 1.25em;
   line-height: 1.25em; }
   #practice-areas .img-wrap {
-    max-width: 224px; }
+    max-width: 224px;
+    margin: 0px auto; }
     #practice-areas .img-wrap img {
       width: 100%; }
   #practice-areas .pa-list {
@@ -1013,15 +1029,32 @@ HOME STYLES
 /* post by id (i.e. post-3) */
 .index .post {
   padding-bottom: 30px; }
+  .index .post:first-child {
+    margin-top: 0px; }
   .index .post h1 {
     margin-bottom: 0px; }
   .index .post .byline {
     margin: 0px;
     padding-bottom: 10px;
     border-bottom: 3px solid #beb8a6; }
+.index .pa-list {
+  margin-top: 0px; }
+  .index .pa-list h3 {
+    margin: 0px 0px 20px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    text-align: center;
+    border-bottom: 3px solid #beb8a6; }
+.index img {
+  display: none; }
+.index .tags a {
+  font-family: "Georgia", Cambria, Times New Roman, Times, serif; }
+.index .recent a {
+  font-family: "Georgia", Cambria, Times New Roman, Times, serif;
+  font-size: 14px; }
 
 .post {
-  margin-top: 2.2em;
+  margin: 2em 0px;
   padding: 0px 20px;
   background: url(../images/list-bg.jpg) repeat; }
 
@@ -1140,7 +1173,7 @@ HOME STYLES
     padding: 10px; }
   .entry-content .wpcf7 form {
     float: left; }
-    .entry-content .wpcf7 form input[type=text], .entry-content .wpcf7 form [type=email], .entry-content .wpcf7 form textarea {
+    .entry-content .wpcf7 form input[type=text], .entry-content .wpcf7 form input[type=email], .entry-content .wpcf7 form input[type=tel], .entry-content .wpcf7 form textarea {
       border: 2px solid #beb8a6; }
 
 /* end .entry-content */
@@ -1456,9 +1489,15 @@ SIDEBARS & ASIDES
 #contact, .wpcf7 form {
   font-size: 0.875em;
   color: black; }
+  #contact .cta h3, #contact .cta p, .wpcf7 form .cta h3, .wpcf7 form .cta p {
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    background: url(../images/bg-divide.png) repeat-x bottom left; }
   #contact form, .wpcf7 form form {
     margin: 1.625em auto;
-    width: 96%; }
+    padding-bottom: 20px;
+    width: 96%;
+    background: url(../images/bg-divide.png) repeat-x bottom left; }
     #contact form a, .wpcf7 form form a {
       text-decoration: none;
       font-family: calisti, "Georgia", Cambria, Times New Roman, Times, serif;
@@ -1900,6 +1939,16 @@ you can add resource intensive styles.
 
   /* end .nav */
   /*********************
+  HOME STYLES
+  *********************/
+  #boxes .box {
+    border-bottom: 0px;
+    padding-bottom: 0px; }
+
+  #practice-areas .img-wrap {
+    margin: 0px; }
+
+  /*********************
   CONTENT AND PAGE STYLES
   *********************/
   .entry-content h2 {
@@ -1929,6 +1978,13 @@ you can add resource intensive styles.
     -webkit-transition-property: -webkit-transform, opacity;
     -moz-transition-property: -moz-transform, opacity;
     transition-property: transform, opacity; }
+
+  .index img {
+    display: block;
+    max-width: 100%;
+    padding: .7em;
+    margin-bottom: 15px;
+    background: url(../images/list-bg.jpg) repeat; }
 
   /*********************
   SIDEBARS & ASIDES

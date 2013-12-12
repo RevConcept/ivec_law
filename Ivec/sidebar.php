@@ -31,7 +31,9 @@
 							
 							<?php if( $il_contact_form ) : ?>
 								<div id="contact" class="widget">
-									<?php echo $il_contact_text; ?>
+									<div class="cta">
+										<?php echo $il_contact_text; ?>
+									</div>
 									<?php echo $il_contact_form; ?>
 								</div>
 							<?php endif; ?>
