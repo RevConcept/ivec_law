@@ -1,7 +1,7 @@
 				<?php 
 					
 						$il_contact_text = get_field('sidebar_contact_form_text', 'options');
-						$il_contact_form = get_field('sidebar_contact_form', 'options');
+						$il_contact_form = get_field('contact_form', 'options');
 						$il_phone = get_field('sidebar_phone', 'options');
 					
 				?>
@@ -15,7 +15,9 @@
 								</a>
 							</div>
 
-							<?php echo do_shortcode('[google-translator]'); ?>
+							<div id="translate">
+								<?php echo do_shortcode('[google-translator]'); ?>
+							</div>
 				
 							<?php if( $il_phone ) : ?>
 								<div id="phone" class="widget" class="fixed">
@@ -29,7 +31,7 @@
 
 						<div class="sidebar-scroll">
 							
-							<?php if( $il_contact_form ) : ?>
+							<?php if( $il_contact_text ) : ?>
 								<div id="contact" class="widget">
 									<div class="cta">
 										<?php echo $il_contact_text; ?>

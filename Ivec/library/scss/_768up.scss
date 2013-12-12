@@ -342,7 +342,7 @@ SIDEBARS & ASIDES
 	}
 }
 #contact {
-	margin-top: 100%;
+	margin-top: 120%;
 
 	.wpcf7-submit {
 		margin-left: 20px;
@@ -364,6 +364,13 @@ SIDEBARS & ASIDES
 }
 .tsml-wrap {
 	position: relative;
+	.inner-tsml {
+		display: none;
+		&:first-child {
+			display: block;
+		}
+	}
+
 }
 
 
