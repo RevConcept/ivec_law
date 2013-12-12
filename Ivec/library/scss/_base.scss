@@ -632,7 +632,7 @@ HOME STYLES
 
 			b, strong {font-family: $content-bold; font-weight: normal;}
 
-			em {font-family: $content-italic;}
+			em {font-family: $content-italic; font-style:normal;}
 
 			strong em, em strong { font-family: $content-bi; font-weight: normal;}
 
@@ -755,6 +755,8 @@ HOME STYLES
 
 			.wpcf7 form {
 				float: left;
+				width: 400px;
+				max-width: 100%;
 
 				input[type=text], input[type=email], input[type=tel], textarea {
 					border: 2px solid $tan;
@@ -1418,6 +1420,29 @@ a.btn {
 	}
 
 /*********************
+CONTACT FORM GENERAL STYLES
+*********************/
+
+.wpcf7 {
+
+	span.wpcf7-not-valid-tip {
+		color: $red;
+		background: transparent;
+		border: 0px;
+	}
+
+	.wpcf7-response-output {
+		border: 0px;
+		color: $white;
+		background: $red;
+		margin: 0px;
+		text-shadow: none;
+	}
+}
+
+
+
+/*********************
 FOOTER STYLES
 *********************/
 
@@ -1446,14 +1471,14 @@ FOOTER STYLES
 	}
 
 	.street-num {
-		float: left;
+		text-align: center;
 		font-size: 4em;
 		font-family: $content-italic;
 	}
 
 	.street-name {
-		float: left;
-		margin: 25px;
+		text-align: center;
+		margin: 0px 0px 20px;
 		text-transform: uppercase;
 		letter-spacing: 2px; 
 
@@ -1464,10 +1489,20 @@ FOOTER STYLES
 	}
 
 	.social {
-		margin: 70px 0px 0px;
+		margin: 0px;
+		text-align: center;
 
 		&:hover {
 			opacity: .8;
+		}
+	}
+
+	.associations {
+		text-align: center;
+
+		img {
+			max-width: 100%;
+			margin-bottom: 20px;
 		}
 	}
 }
@@ -1488,5 +1523,6 @@ FOOTER STYLES
 	.copyright {
 		margin-top: 0px;
 		font-family: $content-italic;
+		text-align: center;
 	}
 

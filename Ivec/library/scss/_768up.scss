@@ -495,6 +495,29 @@ mobile. Make sure to double check these!
 
 	.address {
 		margin-top: 20px;
+
+		.street-num {
+			float: left;
+			font-size: 3.2em;
+			font-family: $content-italic;
+		}
+
+		.street-name {
+			float: left;
+			margin: 15px 0px 0px 10px;
+			text-transform: uppercase;
+			letter-spacing: 2px; 
+
+			span {
+				text-transform: none;
+				font-family: $content-italic;
+			}
+		}
+	}
+
+	.social {
+		margin: 70px 0px 0px;
+		text-align: left;
 	}
 
 	.associations {
@@ -526,4 +549,8 @@ mobile. Make sure to double check these!
 		}
 	}
 } /* end .footer-links */
+
+.copyright {
+		text-align: left;
+	}
 

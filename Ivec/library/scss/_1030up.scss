@@ -8,3 +8,28 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop. 
 
 ******************************************************************/
+
+
+.footer {
+	.address {
+		margin-top: 20px;
+
+		.street-num {
+			float: left;
+			font-size: 4em;
+			font-family: $content-italic;
+		}
+
+		.street-name {
+			float: left;
+			margin: 25px;
+			text-transform: uppercase;
+			letter-spacing: 2px; 
+
+			span {
+				text-transform: none;
+				font-family: $content-italic;
+			}
+		}
+	}
+}
