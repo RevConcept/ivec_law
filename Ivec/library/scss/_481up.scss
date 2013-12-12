@@ -14,8 +14,15 @@ so you still want to keep it pretty light and simply expand
 upon your base.scss styles.
 
 ******************************************************************/
-
-
+/*********************
+TESTIMONIAL PAGE STYLES
+*********************/
+.testimonials-page { 
+	.tsml {
+		width: 47%;
+		min-width: 200px;
+	}
+}
 	
 /*********************
 NAVIGATION STYLES

@@ -868,8 +868,10 @@ TESTIMONIALS STYLES
 	.tsml {
 
 		background: url(../images/list-bg.jpg) repeat;
-		padding: 2%;
+		padding: 10px;
 		margin: 2% 2% 2em;
+		width: 96%;
+		min-width: 150px;
 		
 		p {
 			line-height: 1.5em;
@@ -899,6 +901,36 @@ TESTIMONIALS STYLES
 		}
 		
 	}
+	.tsml-container {
+		margin: 0 auto;
+	}
+
+	.isotope-item {
+	    z-index: 2;
+	}
+	.isotope-hidden.isotope-item {
+	    pointer-events: none;
+	    z-index: 1;
+	}
+	.isotope,
+	.isotope .isotope-item {
+	  /* change duration value to whatever you like */
+
+	    -webkit-transition-duration: 0.8s;
+	    -moz-transition-duration: 0.8s;
+	    transition-duration: 0.8s;
+	}
+	.isotope {
+	    -webkit-transition-property: height, width;
+	    -moz-transition-property: height, width;
+	    transition-property: height, width;
+	}
+	.isotope .isotope-item {
+	    -webkit-transition-property: -webkit-transform, opacity;
+	    -moz-transition-property: -moz-transform, opacity;
+	    transition-property: transform, opacity;
+	}
+
 	
 }
 

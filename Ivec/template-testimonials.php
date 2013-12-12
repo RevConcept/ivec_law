@@ -45,7 +45,7 @@
 																			'numberposts' => -1
 																));
 												if( $tsml_posts ) : ?>
-													<div class="tsml-container">
+													<div class="tsml-container clearfix">
 												<?php foreach ($tsml_posts as $tsml_post) : ?>
 
 														<?php if( get_field('tsml_type', $tsml_post->ID) ) : 

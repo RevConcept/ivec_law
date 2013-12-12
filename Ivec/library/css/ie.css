@@ -317,6 +317,14 @@ upon your base.scss styles.
 
 ******************************************************************/
 /*********************
+TESTIMONIAL PAGE STYLES
+*********************/
+.testimonials-page .tsml {
+  width: 47%;
+  min-width: 200px;
+}
+
+/*********************
 NAVIGATION STYLES
 *********************/
 /* .menu is clearfixed inside mixins.scss */
@@ -580,33 +588,8 @@ CONTENT AND PAGE STYLES
 }
 
 .testimonials-page .tsml {
-  width: 27.5%;
-  padding: 2%;
-  margin: 1% 1% 1em;
-}
-.testimonials-page .isotope-item {
-  z-index: 2;
-}
-.testimonials-page .isotope-hidden.isotope-item {
-  pointer-events: none;
-  z-index: 1;
-}
-.testimonials-page .isotope,
-.testimonials-page .isotope .isotope-item {
-  /* change duration value to whatever you like */
-  -webkit-transition-duration: 0.8s;
-  -moz-transition-duration: 0.8s;
-  transition-duration: 0.8s;
-}
-.testimonials-page .isotope {
-  -webkit-transition-property: height, width;
-  -moz-transition-property: height, width;
-  transition-property: height, width;
-}
-.testimonials-page .isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-  -moz-transition-property: -moz-transform, opacity;
-  transition-property: transform, opacity;
+  width: 25%;
+  min-width: 200px;
 }
 
 .index img {

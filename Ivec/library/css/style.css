@@ -1445,8 +1445,10 @@ TESTIMONIALS STYLES
 }
 .testimonials-page .tsml {
   background: url(../images/list-bg.jpg) repeat;
-  padding: 2%;
+  padding: 10px;
   margin: 2% 2% 2em;
+  width: 96%;
+  min-width: 150px;
 }
 .testimonials-page .tsml p {
   line-height: 1.5em;
@@ -1471,6 +1473,33 @@ TESTIMONIALS STYLES
 .testimonials-page .tsml span {
   font-size: 1.2em;
   font-family: "Calisto MT W01 Italic", "Georgia", Cambria, Times New Roman, Times, serif;
+}
+.testimonials-page .tsml-container {
+  margin: 0 auto;
+}
+.testimonials-page .isotope-item {
+  z-index: 2;
+}
+.testimonials-page .isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+.testimonials-page .isotope,
+.testimonials-page .isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+.testimonials-page .isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  transition-property: height, width;
+}
+.testimonials-page .isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  transition-property: transform, opacity;
 }
 
 /******************************************************************
@@ -1922,6 +1951,14 @@ tweeners.
   
   ******************************************************************/
   /*********************
+  TESTIMONIAL PAGE STYLES
+  *********************/
+  .testimonials-page .tsml {
+    width: 47%;
+    min-width: 200px;
+  }
+
+  /*********************
   NAVIGATION STYLES
   *********************/
   /* .menu is clearfixed inside mixins.scss */
@@ -2289,33 +2326,8 @@ you can add resource intensive styles.
   }
 
   .testimonials-page .tsml {
-    width: 27.5%;
-    padding: 2%;
-    margin: 1% 1% 1em;
-  }
-  .testimonials-page .isotope-item {
-    z-index: 2;
-  }
-  .testimonials-page .isotope-hidden.isotope-item {
-    pointer-events: none;
-    z-index: 1;
-  }
-  .testimonials-page .isotope,
-  .testimonials-page .isotope .isotope-item {
-    /* change duration value to whatever you like */
-    -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    transition-duration: 0.8s;
-  }
-  .testimonials-page .isotope {
-    -webkit-transition-property: height, width;
-    -moz-transition-property: height, width;
-    transition-property: height, width;
-  }
-  .testimonials-page .isotope .isotope-item {
-    -webkit-transition-property: -webkit-transform, opacity;
-    -moz-transition-property: -moz-transform, opacity;
-    transition-property: transform, opacity;
+    width: 25%;
+    min-width: 200px;
   }
 
   .index img {
