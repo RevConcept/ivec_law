@@ -84,12 +84,6 @@
 
 										</section>
 
-
-										<footer class="article-footer">
-											<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-										</footer>
-
 									</article>
 
 							<?php endwhile; ?>
@@ -103,14 +97,14 @@
 								</article>
 
 							<?php endif;  ?>
+
+							<?php get_template_part( 'part', 'evaluation' ); ?>
 						
 
-					</div>
+					</div><!--end main-->
 
-					
+				</div><!--end inner-content-->
 
-				</div>
-
-			</div>
+			</div><!--end content-->
 
 <?php get_footer(); ?>

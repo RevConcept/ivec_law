@@ -48,6 +48,8 @@
 										</nav>
 								<?php } ?>
 
+								<?php get_template_part( 'part', 'evaluation' ); ?>
+
 								<?php else : ?>
 
 									<article id="post-not-found" class="hentry clearfix">
