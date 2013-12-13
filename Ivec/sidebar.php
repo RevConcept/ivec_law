@@ -22,7 +22,7 @@
 							<?php if( $il_phone ) : ?>
 								<div id="phone" class="widget" class="fixed">
 									<div class="wrap">
-										<a href="tel:<?php echo $il_phone ?>,callto:<?php echo $il_phone; ?>"> <span class="title">Call</span><?php echo $il_phone; ?></a>
+										<a href="tel:<?php echo $il_phone ?>"> <span class="title">Call</span><?php echo $il_phone; ?></a>
 									</div>
 								</div>
 							<?php endif; ?>

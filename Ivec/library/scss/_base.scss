@@ -1470,21 +1470,32 @@ FOOTER STYLES
 		display: none;
 	}
 
-	.street-num {
-		text-align: center;
-		font-size: 4em;
-		font-family: $content-italic;
-	}
+	.address {
 
-	.street-name {
-		text-align: center;
-		margin: 0px 0px 20px;
-		text-transform: uppercase;
-		letter-spacing: 2px; 
+		a {
+			color: $tan;
 
-		span {
-			text-transform: none;
+			&:hover {
+				color: $white;
+			}
+		}
+
+		.street-num {
+			text-align: center;
+			font-size: 4em;
 			font-family: $content-italic;
+		}
+
+		.street-name {
+			text-align: center;
+			margin: 0px 0px 20px;
+			text-transform: uppercase;
+			letter-spacing: 2px; 
+
+			span {
+				text-transform: none;
+				font-family: $content-italic;
+			}
 		}
 	}
 

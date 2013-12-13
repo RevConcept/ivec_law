@@ -14,23 +14,26 @@
 
 					<div class="sixcol clearfix" >
 
+						<?php $address_link = get_field('footer_address_link', 'options'); ?>
+
 						<div class="address clearfix">
+							<a href="<?php echo $address_link; ?>">
+								<div class="street-num">
+									<?php the_field('footer_street_number', 'options'); ?>
+								</div>
 
-							<div class="street-num">
-								<?php the_field('footer_street_number', 'options'); ?>
-							</div>
-
-							<div class="street-name">
-								<?php the_field('footer_street_address', 'options'); ?><br />
-								<span><?php the_field('footer_cs', 'options'); ?></span>
-							</div>
+								<div class="street-name">
+									<?php the_field('footer_street_address', 'options'); ?><br />
+									<span><?php the_field('footer_cs', 'options'); ?></span>
+								</div>
+							</a>
 
 						</div><!--end address-->
 
 						<p class="source-org copyright">Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>. Site by <a href="http://revelationconcept.com" target="_blank">Revelation Concept</a>.</p>
 
 						<div class="service-areas"><?php the_field('footer_service', 'options'); ?></div>
-						
+
 					</div><!--end sixcol-->
 
 					<div class="threecol last clearfix" >
