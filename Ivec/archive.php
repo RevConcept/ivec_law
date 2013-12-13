@@ -43,6 +43,8 @@
 									</h1>
 							<?php } ?>
 
+							<a class="button" href="<?php bloginfo('url'); ?>/articles">Back to Articles</a>
+
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">

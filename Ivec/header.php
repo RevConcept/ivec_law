@@ -54,7 +54,7 @@
 					
 					<div id="mobile-menu" class="clearfix">
 						<a class="menu-btn">Menu</a>
-						<a class="menu-phone" href="tel:<?php if($il_phone) : echo $il_phone; endif; ?>,callto:<?php if($il_phone) : echo $il_phone; endif; ?>"><?php if($il_phone) : echo $il_phone; endif; ?></a>
+						<a class="menu-phone" href="tel:<?php if($il_phone) : echo $il_phone; endif; ?>"><?php if($il_phone) : echo $il_phone; endif; ?></a>
 						<a class="menu-logo" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Ivec Law" /></a>
 					</div>
 

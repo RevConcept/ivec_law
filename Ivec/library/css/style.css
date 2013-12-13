@@ -1612,6 +1612,8 @@ CONTACT FORM GENERAL STYLES
   color: #660000;
   background: transparent;
   border: 0px; }
+.wpcf7 span.wpcf7-list-item {
+  margin: 0px; }
 .wpcf7 .wpcf7-response-output {
   border: 0px;
   color: white;
