@@ -479,6 +479,7 @@ mobile. Make sure to double check these!
 	.threecol.nav {
 		display: block;
 		padding-left: 20px;
+		padding-bottom: 30px;
 		background: url(../images/bg-footer-nav.jpg) repeat-y;
 
 		li {
@@ -516,18 +517,22 @@ mobile. Make sure to double check these!
 	}
 
 	.social {
-		margin: 70px 0px 0px;
-		text-align: left;
+		float: right;
+		clear: both;
+		text-align: right;
+	}
+
+	.service-areas {
+		font-family: $content-italic;
+		font-size: 14px;
 	}
 
 	.associations {
 		float: right;
-		margin-top: 50px;
+		margin-top: 40px;
 
 		img {
 			float:right;
-			max-width: 250px;
-			max-width: 100%;
 			margin-bottom: 20px;
 		}
 	}

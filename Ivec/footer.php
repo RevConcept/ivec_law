@@ -29,27 +29,8 @@
 
 						<p class="source-org copyright">Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>. Site by <a href="http://revelationconcept.com" target="_blank">Revelation Concept</a>.</p>
 
-
-						<?php if(get_field('footer_social', 'options')): ?>
- 
-							<ul class="social">
-						 
-							<?php while(has_sub_field('footer_social', 'options')):
-
-								$attachment_id = get_sub_field('network_icon', 'options');
-								$size = "full"; // (thumbnail, medium, large, full or custom size)
-								$image = wp_get_attachment_image_src( $attachment_id, $size );
-
-							?>
-						 
-								<li><a href="<?php the_sub_field('network_link', 'options'); ?>" target="_blank"><img src="<?php echo $image[0]; ?>" /></a></li>
-						 
-							<?php endwhile; ?>
-						 
-							</ul>
-						 
-						<?php endif; ?>
-
+						<div class="service-areas"><?php the_field('footer_service', 'options'); ?></div>
+						
 					</div><!--end sixcol-->
 
 					<div class="threecol last clearfix" >
@@ -67,6 +48,26 @@
 							?>
 						 
 								<li><img src="<?php echo $image[0]; ?>" alt="Association" /></li>
+						 
+							<?php endwhile; ?>
+						 
+							</ul>
+						 
+						<?php endif; ?>
+
+						<?php if(get_field('footer_social', 'options')): ?>
+ 
+							<ul class="social">
+						 
+							<?php while(has_sub_field('footer_social', 'options')):
+
+								$attachment_id = get_sub_field('network_icon', 'options');
+								$size = "full"; // (thumbnail, medium, large, full or custom size)
+								$image = wp_get_attachment_image_src( $attachment_id, $size );
+
+							?>
+						 
+								<li><a href="<?php the_sub_field('network_link', 'options'); ?>" target="_blank"><img src="<?php echo $image[0]; ?>" /></a></li>
 						 
 							<?php endwhile; ?>
 						 

@@ -620,6 +620,7 @@ mobile. Make sure to double check these!
   .footer .threecol.nav {
     display: block;
     padding-left: 20px;
+    padding-bottom: 30px;
     background: url(../images/bg-footer-nav.jpg) repeat-y; }
     .footer .threecol.nav li {
       display: inline; }
@@ -643,15 +644,17 @@ mobile. Make sure to double check these!
         text-transform: none;
         font-family: "Calisto MT W01 Italic", "Georgia", Cambria, Times New Roman, Times, serif; }
   .footer .social {
-    margin: 70px 0px 0px;
-    text-align: left; }
+    float: right;
+    clear: both;
+    text-align: right; }
+  .footer .service-areas {
+    font-family: "Calisto MT W01 Italic", "Georgia", Cambria, Times New Roman, Times, serif;
+    font-size: 14px; }
   .footer .associations {
     float: right;
-    margin-top: 50px; }
+    margin-top: 40px; }
     .footer .associations img {
       float: right;
-      max-width: 250px;
-      max-width: 100%;
       margin-bottom: 20px; }
 
 .footer-links ul li {
