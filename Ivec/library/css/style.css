@@ -1950,6 +1950,9 @@ you can add resource intensive styles.
       color: #beb8a7;
       background: #181818 url(../images/bg-black.png) repeat; }
 
+  .mobile-translate {
+    /*display: none;*/ }
+
   /*********************
   NAVIGATION STYLES
   *********************/

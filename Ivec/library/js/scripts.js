@@ -92,6 +92,7 @@ jQuery(document).ready(function($) {
 		$('.menu-btn', '#mobile-menu').click( function() {
 			ivec_menu.init();
 		});
+
 	}
 
 	
