@@ -58,16 +58,11 @@
 						<a class="menu-phone" href="tel:<?php if($il_phone) : echo $il_phone; endif; ?>"><?php if($il_phone) : echo $il_phone; endif; ?></a>
 						<a class="menu-logo" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Ivec Law" /></a>
 					</div>
-
 					<div id="nav-wrap" class="ninecol last">
 						<nav role="navigation">					
 							<?php bones_main_nav(); ?>
 						</nav>
-						<?php if($_POST['768up']) : echo 'hello'; else : ?> 
-							<div id="translate-mobile">
-								<?php echo do_shortcode('[google-translator]'); ?>
-							</div>
-						<?php endif; ?>
 					</div>
 				</div>
 			</header>
+

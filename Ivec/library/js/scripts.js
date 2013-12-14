@@ -40,6 +40,7 @@ jQuery(document).ready(function($) {
 	/* getting viewport width */
 	var responsive_viewport = $(window).width();
 	
+	
 	/* if is below 481px */
 	if (responsive_viewport < 481) {
 	
@@ -53,18 +54,16 @@ jQuery(document).ready(function($) {
 	/* if is less than to 768px */
 	if (responsive_viewport < 768) {
 
-		//google translate for
-		 $.post({
-	       data: {
-	           up768: 'true'
-	       },
-	       success: function (data) {
-                        console.log(data);
-                    },
-           error: function(data) {
-           	console.log(data);
-           }
-	    });
+		//google translate ajax
+		var data = {
+			action: 'my_action'     // We pass php values differently!
+		};
+		// We can also pass the url value separately from ajaxurl for front end AJAX implementations
+		jQuery.post(ajax_object.ajax_url, data, function(response) {
+			$('#translate').remove();
+			$('.header .nav').append('<li class="mobile-translate"><div id="translate-mobile">' + response + '</div></li>');
+		});
+ 
 
 		//mobile menu
 		var ivec_menu = {
@@ -111,8 +110,17 @@ jQuery(document).ready(function($) {
 	
 	/* if is above or equal to 768px */
 	if (responsive_viewport >= 768) {
+		//google translate ajax
+		var data = {
+			action: 'my_action',
+		};
+		// We can also pass the url value separately from ajaxurl for front end AJAX implementations
+		jQuery.post(ajax_object.ajax_url, data, function(response) {
+			$('.header .nav li.translate-mobile').remove();
+			$('#translate').html(response);
+		});
 
-		//we have a special sidebar that has three states: regular position, fixed at bottom, and sticky at bottom 
+		//we have a special sidebar that has three states: regular position, fixed at bottom, and sticky at bottom
 		//make our sidebar with properties and functions
 		var ivec_sidebar = {
 			window_scroll: $(window).scrollTop(),
