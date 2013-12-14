@@ -63,6 +63,11 @@
 						<nav role="navigation">					
 							<?php bones_main_nav(); ?>
 						</nav>
+						<?php if($_POST['768up']) : echo 'hello'; else : ?> 
+							<div id="translate-mobile">
+								<?php echo do_shortcode('[google-translator]'); ?>
+							</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</header>

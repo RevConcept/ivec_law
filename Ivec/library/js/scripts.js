@@ -53,6 +53,19 @@ jQuery(document).ready(function($) {
 	/* if is less than to 768px */
 	if (responsive_viewport < 768) {
 
+		//google translate for
+		 $.post({
+	       data: {
+	           up768: 'true'
+	       },
+	       success: function (data) {
+                        console.log(data);
+                    },
+           error: function(data) {
+           	console.log(data);
+           }
+	    });
+
 		//mobile menu
 		var ivec_menu = {
 			header_nav: $('#nav-wrap'),
@@ -106,7 +119,7 @@ jQuery(document).ready(function($) {
 			track_position: 'scrolling',
 			main_height: $('#main').height(),
 			logo_wrap_height: $('#logo-wrapper').outerHeight(true),
-			tsml_top: $('#tsml-sidebar').position().top - 40,
+			tsml_top: $('#tsml-sidebar').position().top - 80,
 			tsml_sidebar: $('#tsml-sidebar'),
 			sidebar_scroll_outer: $('.sidebar-scroll').outerHeight(true),
 			tsml_height: $('#tsml-sidebar').height(),
@@ -119,7 +132,7 @@ jQuery(document).ready(function($) {
 			},
 			set_fixed_tsml: function() {
 				if (this.track_position != 'fixed') {
-			    	this.tsml_sidebar.css({top: this.logo_wrap_height - 40});
+			    	this.tsml_sidebar.css({top: this.logo_wrap_height - 80});
 			    	this.tsml_sidebar.addClass('fixed-tsml');
 			    	this.track_position = 'fixed';
 			    }
@@ -176,68 +189,73 @@ jQuery(document).ready(function($) {
 	// add all your scripts here
 
 		//testimonials page isotope script
-		 $.Isotope.prototype._getCenteredMasonryColumns = function() {
-		    this.width = this.element.width();
-		    
-		    var parentWidth = this.element.parent().width();
-		    
-		                  // i.e. options.masonry && options.masonry.columnWidth
-		    var colW = this.options.masonry && this.options.masonry.columnWidth ||
-		                  // or use the size of the first item
-		                  this.$filteredAtoms.outerWidth(true) ||
-		                  // if there's no items, use size of container
-		                  parentWidth;
-		    
-		    var cols = Math.floor( parentWidth / colW );
-		    cols = Math.max( cols, 1 );
+		// ***** sets up masonry so that the content can be centered ***** START
+       $.Isotope.prototype._getCenteredMasonryColumns = function() {
+            this.width = this.element.width();
+            
+            var parentWidth = this.element.parent().width();
+            
+                          // i.e. options.masonry && options.masonry.columnWidth
+            var colW = this.options.masonry && this.options.masonry.columnWidth ||
+                          // or use the size of the first item
+                          this.$filteredAtoms.outerWidth(true) ||
+                          // if there's no items, use size of container
+                          parentWidth;
+            
+            var cols = Math.floor( parentWidth / colW );
+            cols = Math.max( cols, 1 );
 
-		    // i.e. this.masonry.cols = ....
-		    this.masonry.cols = cols;
-		    // i.e. this.masonry.columnWidth = ...
-		    this.masonry.columnWidth = colW;
-		  };
-		  
-		  $.Isotope.prototype._masonryReset = function() {
-		    // layout-specific props
-		    this.masonry = {};
-		    // FIXME shouldn't have to call this again
-		    this._getCenteredMasonryColumns();
-		    var i = this.masonry.cols;
-		    this.masonry.colYs = [];
-		    while (i--) {
-		      this.masonry.colYs.push( 0 );
-		    }
-		  };
+            // i.e. this.masonry.cols = ....
+            this.masonry.cols = cols;
+            // i.e. this.masonry.columnWidth = ...
+            this.masonry.columnWidth = colW;
+          };
+          
+          $.Isotope.prototype._masonryReset = function() {
+            // layout-specific props
+            this.masonry = {};
+            // FIXME shouldn't have to call this again
+            this._getCenteredMasonryColumns();
+            var i = this.masonry.cols;
+            this.masonry.colYs = [];
+            while (i--) {
+              this.masonry.colYs.push( 0 );
+            }
+          };
 
-		  $.Isotope.prototype._masonryResizeChanged = function() {
-		    var prevColCount = this.masonry.cols;
-		    // get updated colCount
-		    this._getCenteredMasonryColumns();
-		    return ( this.masonry.cols !== prevColCount );
-		  };
-		  
-		  $.Isotope.prototype._masonryGetContainerSize = function() {
-		    var unusedCols = 0,
-		        i = this.masonry.cols;
-		    // count unused columns
-		    while ( --i ) {
-		      if ( this.masonry.colYs[i] !== 0 ) {
-		        break;
-		      }
-		      unusedCols++;
-		    }
-		    
-		    return {
-		          height : Math.max.apply( Math, this.masonry.colYs ),
-		          // fit container to columns that have been used;
-		          width : (this.masonry.cols - unusedCols) * this.masonry.columnWidth
-		        };
-		  };
+          $.Isotope.prototype._masonryResizeChanged = function() {
+            var prevColCount = this.masonry.cols;
+            // get updated colCount
+            this._getCenteredMasonryColumns();
+            return ( this.masonry.cols !== prevColCount );
+          };
+          
+          $.Isotope.prototype._masonryGetContainerSize = function() {
+            var unusedCols = 0,
+                i = this.masonry.cols;
+            // count unused columns
+            while ( --i ) {
+              if ( this.masonry.colYs[i] !== 0 ) {
+                break;
+              }
+              unusedCols++;
+            }
+            
+            return {
+                  height : Math.max.apply( Math, this.masonry.colYs ),
+                  // fit container to columns that have been used;
+                  width : (this.masonry.cols - unusedCols) * this.masonry.columnWidth
+                };
+          };
+        	// ********** END centered stuff
+		 
+
 		var $container = $('.tsml-container');
 		if($container.isotope) {
-			$container.isotope({		
+			$container.isotope({
+			  itemSelector: '.tsml',
 			  masonry: {
-			    gutterWidth: 10
+			    columnWidth: 10
 			  }
 			});
 
@@ -246,6 +264,38 @@ jQuery(document).ready(function($) {
 			  $container.isotope({ filter: selector });
 			  return false;
 			});
+
+			 // Add class based on selection
+        	var $optionSets = $('.tsml-filters.option-set'),
+            $optionLinks = $optionSets.find('a');
+
+            $optionLinks.click(function(){
+            var $this = $(this);
+	            // don't proceed if already selected
+	            if ( $this.hasClass('selected') ) {
+	              return false;
+	            }
+	            var $optionSet = $this.parents('.option-set');
+	            $optionSet.find('.selected').removeClass('selected');
+	            $this.addClass('selected');
+	        
+	            // make option object dynamically, i.e. { filter: '.my-filter-class' }
+	            var options = {},
+	                key = $optionSet.attr('data-option-key'),
+	                value = $this.attr('data-option-value');
+	            // parse 'false' as false boolean
+	            value = value === 'false' ? false : value;
+	            options[ key ] = value;
+	            if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+	              // changes in layout modes need extra logic
+	              changeLayoutMode( $this, options );
+	            } else {
+	              // otherwise, apply new options
+	              $container.isotope( options );
+	            }
+	            
+	            return false;
+        	});
 		}
 
 		//sidebar testimonial fade in/out

@@ -79,6 +79,9 @@ HEADER STYLES
 			padding-left: 0;
 		}
 	}
+	#translate-mobile {
+		display: none;
+	}
 
 }
 
@@ -130,9 +133,6 @@ HEADER STYLES
 	}
 }
 
-.mobile-translate {
-	/*display: none;*/
-}
 
 
 
@@ -263,8 +263,8 @@ CONTENT AND PAGE STYLES
 }
 .testimonials-page { 
 	.tsml {
-		width: 25%;
-		min-width: 200px;
+		width: 260px;
+		float: left;
 	}
 }
 
@@ -306,7 +306,7 @@ SIDEBARS & ASIDES
 	background: url(../images/sidebar-bg.jpg) repeat;
 	max-width: 258px;
 	width: 22.9282%;
-	z-index: 100;
+	z-index: 900;
 	position: fixed;
 	top: 0;
 
@@ -320,7 +320,7 @@ SIDEBARS & ASIDES
 	}
 }
 #contact {
-	margin-top: 120%;
+	margin-top: 135%;
 
 	.wpcf7-submit {
 		margin-left: 20px;

@@ -190,7 +190,6 @@ USAGE: @include transition(all 0.2s ease-in-out);
 
 @mixin text-shadow($h, $v, $b, $c) {
 	$value: $h $v $b $c;
-	filter:DropShadow(Color=$c, OffX=$v, OffY=$h);
 	-moz-text-shadow: $value;
 	-webkit-text-shadow: $value;
 	-o-text-shadow: $value;

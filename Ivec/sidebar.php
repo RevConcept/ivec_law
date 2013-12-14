@@ -6,7 +6,7 @@
 					
 				?>
 				
-					<div id="sidebar-bg" class="threecol first"></div>
+					 <div id="sidebar-bg" class="threecol first"></div> 
 					<div id="sidebar1" class="sidebar threecol first clearfix" role="complementary">
 						<div id="logo-wrapper">
 							<div class="logo">
