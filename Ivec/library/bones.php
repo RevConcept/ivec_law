@@ -155,8 +155,10 @@ function bones_scripts_and_styles() {
 		//testimonials page scripts
 		if( is_page('testimonials') ) {
 			wp_register_script( 'isotope', get_stylesheet_directory_uri() . '/library/js/libs/jquery.isotope.js', array('jquery'),'', true );
+			wp_register_script( 'testimonial-js', get_stylesheet_directory_uri() . '/library/js/testimonial.js', array('isotope'),'', true );
 		
 			wp_enqueue_script( 'isotope' );
+			wp_enqueue_script('testimonial-js');
 		}
 
 		// enqueue styles and scripts
@@ -181,8 +183,10 @@ function bones_scripts_and_styles() {
 
 }
 global $post_variable;
-// Same handler function...
-add_action( 'wp_ajax_my_action', 'my_action_callback' );
+
+//add_action( 'wp_ajax_my_action', 'my_action_callback' );
+add_action( 'wp_ajax_nopriv_my_action', 'my_action_callback' );
+
 function my_action_callback() {
 	echo do_shortcode('[google-translator]');
 	die();

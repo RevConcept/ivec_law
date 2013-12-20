@@ -78,6 +78,9 @@ HEADER STYLES
 		li:first-child {
 			padding-left: 0;
 		}
+		li.mobile-translate {
+			display: none;
+		}
 	}
 	#translate-mobile {
 		display: none;
