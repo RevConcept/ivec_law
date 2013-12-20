@@ -83,6 +83,14 @@
 
 								<?php } ?>
 
+								<div class="pa-list" style="text-align: center;">
+
+									<h3>Subscribe</h3>
+
+									<a class="button" href="<?php bloginfo('url'); ?>/?feed=rss2">RSS Feed</a>
+
+								</div>
+
 								<div class="pa-list">
 
 									<?php $args = array(
