@@ -59,14 +59,23 @@ HEADER STYLES
 	background: none;
 
 	#header-bg {
-		height: 100px;
+		height: 105px;
 		width: 100%;
 		position: absolute;
 	}
 
+	.date {
+		display: block;
+		position: absolute;
+		right: 0px;
+		top: 10px;
+		color: $white;
+		font-family: $content-italic;
+	}
+
 	.nav {
 		background: none;
-		margin: 1.2em auto;
+		margin: 1.6em auto 0px;
 		padding-bottom: 0;
 		width: 100%;
 		li {
