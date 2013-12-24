@@ -16,7 +16,7 @@
 							</div>
 
 							<div id="translate">
-								 	<?php // echo do_shortcode('[google-translator]'); ?>
+<?php echo do_shortcode('[google-translator]'); ?>
 							</div>
 				
 							<?php if( $il_phone ) : ?>

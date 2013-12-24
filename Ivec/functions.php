@@ -1,5 +1,4 @@
 <?php
-
 /*
 Author: Eddie Machado
 URL: htp://themble.com/bones/

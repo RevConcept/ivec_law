@@ -59,23 +59,14 @@ HEADER STYLES
 	background: none;
 
 	#header-bg {
-		height: 105px;
+		height: 100px;
 		width: 100%;
 		position: absolute;
 	}
 
-	.date {
-		display: block;
-		position: absolute;
-		right: 0px;
-		top: 10px;
-		color: $white;
-		font-family: $content-italic;
-	}
-
 	.nav {
 		background: none;
-		margin: 1.6em auto 0px;
+		margin: 1.2em auto;
 		padding-bottom: 0;
 		width: 100%;
 		li {
@@ -87,13 +78,9 @@ HEADER STYLES
 		li:first-child {
 			padding-left: 0;
 		}
-		li.mobile-translate {
-			display: none;
-		}
+
 	}
-	#translate-mobile {
-		display: none;
-	}
+
 
 }
 

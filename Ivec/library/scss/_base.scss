@@ -204,18 +204,10 @@ HEADER STYLES
 		z-index: -1;
 	}
 
-	.date {
-		display: none;
-	}
-
 	.nav {
 		background: lighten($dark, 10%);
 		padding: 10px 0;
 		margin-top: 9px;
-
-		li.mobile-translate {
-			padding: 0 15%;
-		}
 	}
 
 }
@@ -1352,9 +1344,6 @@ SIDEBARS & ASIDES
 	}
 	#translate {
 		height: 50px;
-	}
-	.translate-mobile {
-		padding: 0 15%;
 	}
 
 	#tsml-sidebar {

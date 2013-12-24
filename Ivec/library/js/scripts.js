@@ -54,17 +54,23 @@ jQuery(document).ready(function($) {
 	/* if is less than to 768px */
 	if (responsive_viewport < 768) {
 
-		//google translate ajax
-		var data = {
-			action: 'my_action'     // We pass php values differently!
-		};
-		// We can also pass the url value separately from ajaxurl for front end AJAX implementations
-		jQuery.post(ajax_object.ajax_url, data, function(response) {
-			$('#translate').remove();
-			$('.header .nav').append('<li style="padding: 0 15%;" class="mobile-translate">' + response + '</li>');
-			
-		});
- 
+		(function() {
+			//google translate ajax
+			var $nav_li = $('<li>', {class: 'mobile-translate'});
+			$('.header .nav').append($nav_li);
+			var data = {
+				action: 'ivec_google_translate',
+				view: 'lt768'
+			};
+
+			$.post(ivec_ajax.ajax_url, data, function(response) {
+				$('.header .nav li.mobile-translate').html(response);
+			});
+		
+		})($);
+
+
+
 
 		//mobile menu
 		var ivec_menu = {
@@ -111,15 +117,6 @@ jQuery(document).ready(function($) {
 	
 	/* if is above or equal to 768px */
 	if (responsive_viewport >= 768) {
-		//google translate ajax
-		var data = {
-			action: 'my_action',
-		};
-		// We can also pass the url value separately from ajaxurl for front end AJAX implementations
-		jQuery.post(ajax_object.ajax_url, data, function(response) {
-			$('.header .nav li.mobile-translate').remove();
-			$('#translate').append(response);
-		});
 
 		//we have a special sidebar that has three states: regular position, fixed at bottom, and sticky at bottom
 		//make our sidebar with properties and functions
