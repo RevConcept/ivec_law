@@ -48,9 +48,22 @@
 								$size = "full"; // (thumbnail, medium, large, full or custom size)
 								$image = wp_get_attachment_image_src( $attachment_id, $size );
 
+								$url = get_sub_field('footer_image_url');
+
 							?>
 						 
-								<li><img src="<?php echo $image[0]; ?>" alt="Association" /></li>
+								<li>
+									<?php if($url !="") {
+										echo '<a href="'. $url .'" target="_blank">';
+									} ?>
+									
+									<img src="<?php echo $image[0]; ?>" alt="Association" />
+									
+									<?php if($url !="") {
+										echo '</a>';
+									} ?>
+
+								</li>
 						 
 							<?php endwhile; ?>
 						 
