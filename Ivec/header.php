@@ -59,6 +59,7 @@
 						<a class="menu-logo" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="Ivec Law" /></a>
 					</div>
 					<div id="nav-wrap" class="ninecol last">
+						<div class="date"><?php echo date('F d, Y'); ?></div>
 						<nav role="navigation">					
 							<?php bones_main_nav(); ?>
 						</nav> 
