@@ -63,8 +63,8 @@ jQuery(document).ready(function($) {
 				view: 'lt768'
 			};
 
-			$.post(ivec_ajax.ajax_url, data, function(response) {
-				$('.header .nav li.mobile-translate').html(response);
+			$.post('http://iveclaw.ignitesolutions.com/', data, function(response) {
+				
 			});
 		
 		})($);

@@ -183,13 +183,6 @@ function bones_scripts_and_styles() {
 
 }
 
-add_action( 'wp_ajax_nopriv_ivec_google_translate', 'ivec_google_translate_callback' );
-add_action( 'wp_ajax_ivec_google_translate', 'ivec_google_translate_callback' );
-function ivec_google_translate_callback() {
-	echo do_shortcode('[google-translator]');
-	exit;
-}
-
 /*********************
 THEME SUPPORT
 *********************/

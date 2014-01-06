@@ -61,7 +61,15 @@
 					<div id="nav-wrap" class="ninecol last">
 						<nav role="navigation">					
 							<?php bones_main_nav(); ?>
-						</nav>
+						</nav> 
+						<?php 
+						add_action( 'wp_ajax_nopriv_ivec_google_translate', 'ivec_google_translate_callback' );
+add_action( 'wp_ajax_ivec_google_translate', 'ivec_google_translate_callback' );
+function ivec_google_translate_callback() {
+	echo do_shortcode('[google-translator]');
+	exit;
+}
+?>
 					</div>
 				</div>
 			</header>
