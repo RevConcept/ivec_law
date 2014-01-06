@@ -45,8 +45,7 @@
 	<body <?php body_class(); ?>>
 
 		<div id="container">
-		test
-
+			
 			<header class="header" role="banner">
 
 				<div id="header-bg"></div><div class="two-lines mobile"></div>
