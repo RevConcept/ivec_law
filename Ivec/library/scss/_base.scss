@@ -204,6 +204,15 @@ HEADER STYLES
 		z-index: -1;
 	}
 
+	.date {
+ 		display: block;
+		position: absolute;
+		right: 0px;
+		top: 10px;
+		color: $white;
+		font-family: $content-italic; 
+	}
+
 	.nav {
 		background: lighten($dark, 10%);
 		padding: 10px 0;
