@@ -39,7 +39,7 @@
 
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
-
+<meta name="google-translate-customization" content="c1b85214a28b0e27-2abc5b6218fa06fb-gab55d703a6bf06f7-b"></meta>
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -62,15 +62,7 @@
 						<div class="date"><?php echo date('F d, Y'); ?></div>
 						<nav role="navigation">					
 							<?php bones_main_nav(); ?>
-						</nav> 
-						<?php 
-						add_action( 'wp_ajax_nopriv_ivec_google_translate', 'ivec_google_translate_callback' );
-add_action( 'wp_ajax_ivec_google_translate', 'ivec_google_translate_callback' );
-function ivec_google_translate_callback() {
-	echo do_shortcode('[google-translator]');
-	exit;
-}
-?>
+						</nav>
 					</div>
 				</div>
 			</header>

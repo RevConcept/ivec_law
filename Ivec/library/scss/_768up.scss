@@ -240,7 +240,9 @@ NAVIGATION STYLES
 	}  /* end current highlighters */
 
 } /* end .nav */
-
+nav li.mobile-translate {
+	display: none;
+}
 /*********************
 HOME STYLES
 *********************/
