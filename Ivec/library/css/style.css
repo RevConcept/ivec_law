@@ -681,6 +681,13 @@ style a page via class
 .practice-areas .pa-list ul {
   padding-top: 20px;
   border-top: 3px solid #beb8a6; }
+  .practice-areas .pa-list ul ul {
+    padding-top: 0px;
+    margin: 0px;
+    border-top: 0px; }
+    .practice-areas .pa-list ul ul li {
+      margin: 0px;
+      font-size: 18px; }
 
 .single header {
   text-align: center; }

@@ -32,19 +32,18 @@
 											<div class="img-wrap aligncenter"><img src="<?php echo $pa_img; ?>" alt="<?php the_title(); ?>" /></div>
 										<?php endif; ?>
 
-										<?php $args = array( 'post_type' => 'practice-areas', 'post_status' => 'publish', 'numberposts' => -1 );
-											$pa_posts = get_posts( $args );
-											if ( $pa_posts ) : ?>
-												<ul>
-												<?php foreach ($pa_posts as $pa_post) : ?>
-													
-													<li>
-														<a href="<?php echo get_permalink($pa_post->ID); ?>" class="<?php echo $pa_post->post_name; ?> <?php if( $curr_post_slug == $pa_post->post_name ) { echo 'active'; } ?>"><?php echo $pa_post->post_title; ?></a>
-													</li>
-													
-												<?php endforeach; ?>
-												</ul>
-											<?php endif; ?>
+										<?php 
+
+										$args = array(
+											'title_li' => '',
+											'post_type' => 'practice-areas',
+											'post_status' => 'publish', 
+										);
+										?>
+
+										<ul>
+											<?php $pa_posts = wp_list_pages( $args ); ?>
+										</ul>
 									
 									</div><!--end pa-list-->
 
