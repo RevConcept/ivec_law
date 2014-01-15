@@ -746,8 +746,12 @@ HOME STYLES
 			and floating images at the next breakpoint,
 			but it's up to you. Feel free to change it up.
 			*/
-			.alignleft, img.alignleft {}
-			.alignright, img.alignright {}
+			.alignleft, img.alignleft {
+				clear: left;
+			}
+			.alignright, img.alignright {
+				clear: right;
+			}
 			.aligncenter, img.aligncenter {}
 
 			video, object {
