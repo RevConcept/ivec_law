@@ -83,7 +83,7 @@
 
 							?>
 						 
-								<li><a href="<?php the_sub_field('network_link', 'options'); ?>" target="_blank"><img src="<?php echo $image[0]; ?>" /></a></li>
+								<li><a href="<?php the_sub_field('network_url', 'options'); ?>" target="_blank"><img src="<?php echo $image[0]; ?>" /></a></li>
 						 
 							<?php endwhile; ?>
 						 
