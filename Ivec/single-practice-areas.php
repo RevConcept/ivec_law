@@ -47,7 +47,7 @@
 									
 									</div><!--end pa-list-->
 
-									<h2><?php the_title(); ?></h2>
+									<h2><?php the_field('pa_title'); ?></h2>
 
 									<?php if( $pa_callout ) : ?>
 										<?php echo $pa_callout; ?>

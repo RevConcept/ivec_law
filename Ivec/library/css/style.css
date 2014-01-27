@@ -1001,8 +1001,14 @@ HOME STYLES
       width: 100%; }
   #practice-areas .pa-list {
     font-size: 1em; }
+    #practice-areas .pa-list .list-col {
+      float: left;
+      margin-right: 20px; }
     #practice-areas .pa-list ul li {
       padding-left: 1em; }
+      #practice-areas .pa-list ul li ul {
+        margin: 0px;
+        font-size: 18px; }
 
 #case-eval {
   text-align: center; }

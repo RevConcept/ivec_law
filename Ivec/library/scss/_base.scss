@@ -497,8 +497,18 @@ HOME STYLES
 	.pa-list {
 		font-size: em(16);
 
+		.list-col {
+			float: left;
+			margin-right: 20px;
+		}
+
 		ul li  {
 			padding-left: 1em;
+
+			ul {
+				margin: 0px;
+				font-size: 18px;
+			}
 		}
 	}
 	
