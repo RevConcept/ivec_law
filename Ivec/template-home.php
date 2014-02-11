@@ -105,79 +105,42 @@ Template Name: Home Page
 
 										<div class="pa-list clearfix">
 
-												<?php
-												// Columns/lists
-												$col_spread = 3;
-												// Grab the pages
-												$get_pages = wp_list_pages( 'echo=0&title_li=&post_type=practice-areas&sort_column=post_title&depth=2' );
-												// Split into array items
-												$pages_array = explode('</li>',$get_pages);
-												// Amount of page items (count of items in array)
-												$results_total = count($pages_array);
-												// How many pages to show per list (round up total divided by 3)
-												$pages_per_list = ceil($results_total / $col_spread);
-												// Counter number for tagging onto each list
-												$list_number = 1;
-												// Set the pages result counter to zero
-												$result_number = 0;
-												?>
-												<ul id="cat-col-<?php echo $list_number; ?>" class="list-col">
-												<?php
-												foreach($pages_array as $pages) {
-													$pages = $pages.'</li>';
-													$result_number++;
-													if(
-														($result_number % $pages_per_list) == 0 &&
-														($col_spread * $pages_per_list) != $result_number)
-													{
-														$list_number++;
-														$pages .= '
-														</ul>
-														<ul id="cat-col-'.$list_number.'" class="list-col">
-														';
-													}
-													echo $pages;
-													unset($pages);
+											<?php
+											// Columns/lists
+											$col_spread = 3;
+											// Grab the pages
+											$get_pages = wp_list_pages( 'echo=0&title_li=&post_type=practice-areas&sort_column=post_title&depth=2' );
+											// Split into array items
+											$pages_array = explode('</li>',$get_pages);
+											// Amount of page items (count of items in array)
+											$results_total = count($pages_array);
+											// How many pages to show per list (round up total divided by 3)
+											$pages_per_list = ceil($results_total / $col_spread);
+											// Counter number for tagging onto each list
+											$list_number = 1;
+											// Set the pages result counter to zero
+											$result_number = 0;
+											?>
+											<ul id="cat-col-<?php echo $list_number; ?>" class="list-col">
+											<?php
+											foreach($pages_array as $pages) {
+												$pages = $pages.'</li>';
+												$result_number++;
+												if(
+													($result_number % $pages_per_list) == 0 &&
+													($col_spread * $pages_per_list) != $result_number)
+												{
+													$list_number++;
+													$pages .= '
+													</ul>
+													<ul id="cat-col-'.$list_number.'" class="list-col">
+													';
 												}
-												?>
-												</ul>
-
-
-											
-												<?php // $args = array( 'post_type' => 'practice-areas', 'post_status' => 'publish', 'numberposts' => -1 );
-													//$pa_posts = get_posts( $args );
-
-												/*	$pa_post_sets = array_chunk($pa_posts, 3);
-													
-
-													if( $pa_post_sets ) :
-														foreach( $pa_post_sets as $key => $post_lists ) :
-
-															switch ($key) {
-																	case 0:
-																		$list_str = '<ul class="fourcol first">';
-																		break;
-																	case 1:
-																		$list_str = '<ul class="fourcol ">';
-																		break;
-																	case 2:
-																		$list_str = '<ul class="fourcol last">';
-																		break;
-																	
-																	default:
-																		$list_str = '<ul class="fourcol ">';
-																		break;
-																}
-
-															foreach($post_lists as $key => $value) :
-																	
-																$list_str .= '<li><a href="' . get_permalink($value->ID) . '">' . $value->post_title . '</a></li>';
-
-															endforeach; 
-															$list_str .= '</ul>';
-															echo $list_str;
-														endforeach;
-													endif; */?>
+												echo $pages;
+												unset($pages);
+											}
+											?>
+											</ul>
 											
 										</div>
 								</div>
