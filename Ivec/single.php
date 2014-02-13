@@ -16,7 +16,7 @@
 
 									<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">JohnPaul Ivec</span>', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', ') );
+										printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author"><a href="https://plus.google.com/u/0/114182957840922769310?rel=author" target="_blank">JohnPaul Ivec</a></span>', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', ') );
 									?></p>
 									<a class="button" href="<?php bloginfo('url'); ?>/articles">Back to Articles</a>
 									

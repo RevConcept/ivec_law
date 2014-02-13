@@ -1536,10 +1536,14 @@ FOOTER STYLES
 	}
 
 	.social {
-		margin: 0px;
+		margin: 0px 0px 30px 0px;
 		text-align: center;
 
-		&:hover {
+		li {
+			display: inline-block;
+		}
+
+		a:hover {
 			opacity: .8;
 		}
 	}
